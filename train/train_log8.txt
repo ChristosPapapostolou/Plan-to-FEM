@@ -1,0 +1,309 @@
+INFO | ============================================================
+INFO | Converting training data...
+INFO |   L1_7/10-shandong-2-4-L1-7.png: 195 nodes, 150 edges (92 PSW, 92 SW)
+INFO |   L1_7/10-shandong-2-5-L1-7.png: 242 nodes, 155 edges (100 PSW, 58 SW)
+INFO |   L1_7/10-shandong-2-7-L1-7.png: 287 nodes, 209 edges (165 PSW, 81 SW)
+INFO |   L1_7/3-anhui-2-L1-7.png: 264 nodes, 187 edges (137 PSW, 78 SW)
+INFO |   L1_7/5-chenhuan-4-002-B_t7-L1-7.png: 272 nodes, 187 edges (124 PSW, 55 SW)
+INFO |   L1_7/5-chenhuan-4-002-C_t7-L1-7.png: 325 nodes, 246 edges (156 PSW, 69 SW)
+INFO |   L1_7/5-chenhuan-4-003-A_t7-L1-7.png: 459 nodes, 377 edges (246 PSW, 110 SW)
+INFO |   L1_7/5-chenhuan-4-014-B-L1-7.png: 327 nodes, 214 edges (145 PSW, 69 SW)
+INFO |   L1_7/5-chenhuan-4-017-L1-7.png: 292 nodes, 208 edges (159 PSW, 88 SW)
+INFO |   L1_7/5-chenhuan-4-021-L1-7.png: 269 nodes, 204 edges (130 PSW, 52 SW)
+INFO |   L1_7/5-chenhuan-jinke03-xibu_t6-1-L1-7.png: 284 nodes, 234 edges (181 PSW, 81 SW)
+INFO |   L1_7/5-chenhuan-jinke03-xibu_t6-3-L1-7.png: 248 nodes, 185 edges (135 PSW, 61 SW)
+INFO |   L1_7/5-chenhuan-jinke03-xibu_t6-5-L1-7.png: 242 nodes, 194 edges (150 PSW, 60 SW)
+INFO |   L1_7/5-chenhuan-jinke03-xibu_t6-7-L1-7.png: 283 nodes, 215 edges (154 PSW, 61 SW)
+INFO |   L1_7/5-chenhuan-jinke03-xibu_t6-8-L1-7.png: 230 nodes, 173 edges (125 PSW, 40 SW)
+INFO |   L1_7/6-BJyuan-3-L1-7-3-7d0.1g-18m.png: 227 nodes, 158 edges (124 PSW, 78 SW)
+INFO |   L1_7/longtrain (16).png: 333 nodes, 224 edges (144 PSW, 89 SW)
+INFO |   L1_7/oldtest (5).png: 298 nodes, 225 edges (124 PSW, 58 SW)
+INFO |   L1_7/oldtest (6).png: 302 nodes, 207 edges (118 PSW, 75 SW)
+INFO |   L1_7/oldtest (7).png: 200 nodes, 147 edges (74 PSW, 47 SW)
+INFO |   L1_7/oldtest (8).png: 344 nodes, 307 edges (172 PSW, 126 SW)
+INFO |   L1_7/oldtest (9).png: 290 nodes, 199 edges (107 PSW, 62 SW)
+INFO |   L1_7/shorttrain (1).png: 317 nodes, 240 edges (137 PSW, 94 SW)
+INFO |   L1_7/shorttrain (10).png: 229 nodes, 157 edges (88 PSW, 35 SW)
+INFO |   L1_7/shorttrain (11).png: 217 nodes, 158 edges (93 PSW, 57 SW)
+INFO |   L1_7/shorttrain (12).png: 257 nodes, 190 edges (106 PSW, 65 SW)
+INFO |   L1_7/shorttrain (14).png: 217 nodes, 165 edges (100 PSW, 51 SW)
+INFO |   L1_7/shorttrain (15).png: 265 nodes, 193 edges (102 PSW, 73 SW)
+INFO |   L1_7/shorttrain (18).png: 234 nodes, 172 edges (77 PSW, 55 SW)
+INFO |   L1_7/shorttrain (19).png: 227 nodes, 172 edges (98 PSW, 63 SW)
+INFO |   L1_7/shorttrain (2).png: 252 nodes, 195 edges (90 PSW, 65 SW)
+INFO |   L1_7/shorttrain (20).png: 316 nodes, 237 edges (123 PSW, 72 SW)
+INFO |   L1_7/shorttrain (24).png: 276 nodes, 204 edges (121 PSW, 75 SW)
+INFO |   L1_7/shorttrain (26).png: 244 nodes, 176 edges (86 PSW, 42 SW)
+INFO |   L1_7/shorttrain (27).png: 323 nodes, 236 edges (167 PSW, 88 SW)
+INFO |   L1_7/shorttrain (3).png: 294 nodes, 250 edges (139 PSW, 108 SW)
+INFO |   L1_7/shorttrain (30).png: 227 nodes, 185 edges (121 PSW, 83 SW)
+INFO |   L1_7/shorttrain (31).png: 304 nodes, 235 edges (165 PSW, 84 SW)
+INFO |   L1_7/shorttrain (32).png: 290 nodes, 225 edges (128 PSW, 66 SW)
+INFO |   L1_7/shorttrain (33).png: 357 nodes, 275 edges (175 PSW, 110 SW)
+INFO |   L1_7/shorttrain (34).png: 261 nodes, 183 edges (98 PSW, 40 SW)
+INFO |   L1_7/shorttrain (35).png: 213 nodes, 157 edges (104 PSW, 65 SW)
+INFO |   L1_7/shorttrain (37).png: 279 nodes, 196 edges (107 PSW, 57 SW)
+INFO |   L1_7/shorttrain (39).png: 234 nodes, 179 edges (106 PSW, 45 SW)
+INFO |   L1_7/shorttrain (4).png: 248 nodes, 201 edges (102 PSW, 75 SW)
+INFO |   L1_7/shorttrain (40).png: 247 nodes, 179 edges (121 PSW, 57 SW)
+INFO |   L1_7/shorttrain (42).png: 273 nodes, 208 edges (119 PSW, 79 SW)
+INFO |   L1_7/shorttrain (43).png: 249 nodes, 201 edges (100 PSW, 74 SW)
+INFO |   L1_7/shorttrain (44).png: 290 nodes, 199 edges (107 PSW, 62 SW)
+INFO |   L1_7/shorttrain (46).png: 227 nodes, 169 edges (90 PSW, 62 SW)
+INFO |   L1_7/shorttrain (52).png: 251 nodes, 164 edges (91 PSW, 52 SW)
+INFO |   L1_7/shorttrain (53).png: 335 nodes, 274 edges (173 PSW, 118 SW)
+INFO |   L1_7/shorttrain (7).png: 283 nodes, 192 edges (121 PSW, 55 SW)
+INFO |   L1_7/shorttrain (8).png: 279 nodes, 210 edges (107 PSW, 55 SW)
+INFO |   L1_7/shorttrain (9).png: 213 nodes, 169 edges (93 PSW, 79 SW)
+INFO |   L2_7/10-shandong-1-1-L2-7.png: 304 nodes, 216 edges (150 PSW, 74 SW)
+INFO |   L2_7/10-shandong-1-3-L2-7.png: 318 nodes, 226 edges (146 PSW, 93 SW)
+INFO |   L2_7/10-shandong-2-1-L2-7.png: 318 nodes, 232 edges (184 PSW, 131 SW)
+INFO |   L2_7/10-shandong-2-10-L2-7.png: 362 nodes, 251 edges (178 PSW, 114 SW)
+INFO |   L2_7/10-shandong-2-11-L2-7.png: 281 nodes, 191 edges (150 PSW, 83 SW)
+INFO |   L2_7/10-shandong-2-12-L2-7.png: 444 nodes, 323 edges (215 PSW, 138 SW)
+INFO |   L2_7/10-shandong-2-13-1-L2-7.png: 271 nodes, 179 edges (122 PSW, 72 SW)
+INFO |   L2_7/10-shandong-2-14-L2-7.png: 283 nodes, 202 edges (124 PSW, 71 SW)
+INFO |   L2_7/10-shandong-2-15-L2-6.png: 331 nodes, 223 edges (151 PSW, 70 SW)
+INFO |   L2_7/10-shandong-2-6-L2-7.png: 405 nodes, 294 edges (206 PSW, 140 SW)
+INFO |   L2_7/10-shandong-2-8-L2-7.png: 335 nodes, 229 edges (145 PSW, 84 SW)
+INFO |   L2_7/10-shandong-3-1-L2-7.png: 290 nodes, 223 edges (176 PSW, 116 SW)
+INFO |   L2_7/10-shandong-3-10-L2-7.png: 288 nodes, 192 edges (129 PSW, 91 SW)
+INFO |   L2_7/10-shandong-3-11-L2-7.png: 351 nodes, 231 edges (147 PSW, 90 SW)
+INFO |   L2_7/10-shandong-3-2-L2-7.png: 320 nodes, 225 edges (151 PSW, 94 SW)
+INFO |   L2_7/10-shandong-3-3-L2-7.png: 311 nodes, 235 edges (164 PSW, 100 SW)
+INFO |   L2_7/10-shandong-3-4-L2-7.png: 263 nodes, 178 edges (124 PSW, 76 SW)
+INFO |   L2_7/10-shandong-3-5-L2-7.png: 322 nodes, 221 edges (158 PSW, 93 SW)
+INFO |   L2_7/10-shandong-3-6-L2-7.png: 252 nodes, 175 edges (122 PSW, 81 SW)
+INFO |   L2_7/10-shandong-3-7-L2-7.png: 208 nodes, 146 edges (116 PSW, 57 SW)
+INFO |   L2_7/10-shandong-3-8-L2-7.png: 232 nodes, 153 edges (120 PSW, 72 SW)
+INFO |   L2_7/10-shandong-3-9-L2-7.png: 238 nodes, 154 edges (109 PSW, 80 SW)
+INFO |   L2_7/2-anhui-2-L2-7.png: 338 nodes, 233 edges (164 PSW, 78 SW)
+INFO |   L2_7/2-anhui-3-L2-7.png: 284 nodes, 207 edges (134 PSW, 48 SW)
+INFO |   L2_7/3-anhui-3-L2-7.png: 294 nodes, 206 edges (154 PSW, 90 SW)
+INFO |   L2_7/4-linyq-2-L2-7.png: 346 nodes, 240 edges (176 PSW, 93 SW)
+INFO |   L2_7/6-BJyuan-4-7d0.1-78m-L2-7.png: 361 nodes, 241 edges (171 PSW, 110 SW)
+INFO |   L2_7/9-guangdong-01nanning35G1G5-L2-6.png: 273 nodes, 208 edges (149 PSW, 100 SW)
+INFO |   L2_7/9-guangdong-01nanningC3-L2-6.png: 228 nodes, 171 edges (129 PSW, 68 SW)
+INFO |   L2_7/9-guangdong-02nanning35G2G3-L2-6.png: 270 nodes, 193 edges (131 PSW, 73 SW)
+INFO |   L2_7/9-guangdong-02nanningC9-L2-6.png: 272 nodes, 204 edges (140 PSW, 79 SW)
+INFO |   L2_7/9-guangdong-03nanning35G6-L2-6.png: 244 nodes, 171 edges (122 PSW, 94 SW)
+INFO |   L2_7/9-guangdong-03nanningC3-L2-6.png: 228 nodes, 177 edges (136 PSW, 73 SW)
+INFO |   L2_7/9-guangdong-04nanningC5-L2-6.png: 235 nodes, 161 edges (127 PSW, 75 SW)
+INFO |   L2_7/longtrain (1).png: 259 nodes, 178 edges (101 PSW, 95 SW)
+INFO |   L2_7/longtrain (11).png: 249 nodes, 191 edges (124 PSW, 80 SW)
+INFO |   L2_7/longtrain (19).png: 278 nodes, 224 edges (131 PSW, 91 SW)
+INFO |   L2_7/longtrain (2).png: 124 nodes, 84 edges (55 PSW, 50 SW)
+INFO |   L2_7/longtrain (24).png: 308 nodes, 235 edges (138 PSW, 68 SW)
+INFO |   L2_7/longtrain (25).png: 292 nodes, 222 edges (126 PSW, 63 SW)
+INFO |   L2_7/longtrain (26).png: 295 nodes, 210 edges (132 PSW, 99 SW)
+INFO |   L2_7/longtrain (28).png: 323 nodes, 255 edges (151 PSW, 80 SW)
+INFO |   L2_7/longtrain (3).png: 205 nodes, 139 edges (70 PSW, 67 SW)
+INFO |   L2_7/longtrain (31).png: 322 nodes, 259 edges (160 PSW, 86 SW)
+INFO |   L2_7/longtrain (38).png: 311 nodes, 262 edges (166 PSW, 93 SW)
+INFO |   L2_7/longtrain (42).png: 343 nodes, 241 edges (109 PSW, 45 SW)
+INFO |   L2_7/oldtest (1).png: 264 nodes, 174 edges (80 PSW, 42 SW)
+INFO |   L2_7/oldtest (3).png: 260 nodes, 181 edges (93 PSW, 72 SW)
+INFO |   L2_7/shorttrain (13).png: 317 nodes, 255 edges (166 PSW, 103 SW)
+INFO |   L2_7/shorttrain (21).png: 303 nodes, 220 edges (142 PSW, 111 SW)
+INFO |   L2_7/shorttrain (28).png: 452 nodes, 352 edges (201 PSW, 141 SW)
+INFO |   L2_7/shorttrain (29).png: 338 nodes, 254 edges (129 PSW, 88 SW)
+INFO |   L2_7/shorttrain (36).png: 308 nodes, 242 edges (118 PSW, 78 SW)
+INFO |   L2_7/shorttrain (38).png: 281 nodes, 207 edges (103 PSW, 66 SW)
+INFO |   L2_7/shorttrain (50).png: 284 nodes, 209 edges (115 PSW, 95 SW)
+INFO |   L1L2_8/1-THU-1-L1-8.png: 348 nodes, 229 edges (175 PSW, 149 SW)
+INFO |   L1L2_8/1-THU-10-L1-8.png: 341 nodes, 216 edges (163 PSW, 129 SW)
+INFO |   L1L2_8/1-THU-11-L1-8.png: 301 nodes, 212 edges (159 PSW, 132 SW)
+INFO |   L1L2_8/1-THU-12-L1-8.png: 320 nodes, 218 edges (167 PSW, 143 SW)
+INFO |   L1L2_8/1-THU-14-L1-8.png: 235 nodes, 161 edges (120 PSW, 95 SW)
+INFO |   L1L2_8/1-THU-16-L1-8.png: 186 nodes, 123 edges (90 PSW, 63 SW)
+INFO |   L1L2_8/1-THU-17-L1-8.png: 252 nodes, 173 edges (131 PSW, 99 SW)
+INFO |   L1L2_8/1-THU-18-L1-8.png: 201 nodes, 153 edges (119 PSW, 92 SW)
+INFO |   L1L2_8/1-THU-19-L1-8.png: 173 nodes, 116 edges (91 PSW, 63 SW)
+INFO |   L1L2_8/1-THU-2-L1-8.png: 364 nodes, 242 edges (189 PSW, 158 SW)
+INFO |   L1L2_8/1-THU-20-L1-8.png: 189 nodes, 123 edges (92 PSW, 70 SW)
+INFO |   L1L2_8/1-THU-21-L1-8.png: 238 nodes, 168 edges (129 PSW, 102 SW)
+INFO |   L1L2_8/1-THU-4-L1-8.png: 351 nodes, 243 edges (173 PSW, 142 SW)
+INFO |   L1L2_8/1-THU-5-L1-8.png: 390 nodes, 260 edges (192 PSW, 150 SW)
+INFO |   L1L2_8/1-THU-7-L1-8.png: 230 nodes, 162 edges (124 PSW, 94 SW)
+INFO |   L1L2_8/1-THU-8-L1-8.png: 223 nodes, 148 edges (117 PSW, 86 SW)
+INFO |   L1L2_8/1-THU-9-L1-8.png: 311 nodes, 218 edges (169 PSW, 132 SW)
+INFO |   L1L2_8/6-BJYyuan-17-2-L1-8d0.2g-14m.png: 227 nodes, 162 edges (98 PSW, 52 SW)
+INFO |   L1L2_8/6-BJYyuan-17-L1-8d0.2g-14m.png: 296 nodes, 209 edges (155 PSW, 95 SW)
+INFO |   L1L2_8/6-BJyuan-1-8d0.2g-66m.png: 438 nodes, 320 edges (209 PSW, 173 SW)
+INFO |   L1L2_8/6-BJyuan-15-2-L1-8d0.2g-25m.png: 286 nodes, 193 edges (145 PSW, 91 SW)
+INFO |   L1L2_8/6-BJyuan-15-L1-8d0.2g-25m.png: 301 nodes, 198 edges (137 PSW, 79 SW)
+INFO |   L1L2_8/6-BJyuan-16-1-L1-8d0.2g-22m.png: 249 nodes, 183 edges (110 PSW, 60 SW)
+INFO |   L1L2_8/6-BJyuan-16-2-L1-8d0.2g-22m.png: 268 nodes, 188 edges (148 PSW, 104 SW)
+INFO |   L1L2_8/6-BJyuan-18-1-L1-8d0.2g-33m.png: 311 nodes, 191 edges (135 PSW, 91 SW)
+INFO |   L1L2_8/6-BJyuan-19-L2-8d0.2g-78m.png: 272 nodes, 183 edges (143 PSW, 115 SW)
+INFO |   L1L2_8/6-BJyuan-2-8d0.2g-39.5m.png: 138 nodes, 97 edges (78 PSW, 25 SW)
+INFO |   L1L2_8/6-BJyuan-21-1-L1-8d0.2g-52m.png: 213 nodes, 148 edges (94 PSW, 67 SW)
+INFO |   L1L2_8/6-BJyuan-23-L1-8d0.2g-52m.png: 359 nodes, 253 edges (179 PSW, 152 SW)
+INFO |   L1L2_8/6-BJyuan-24-L1-8d0.2g-52m.png: 346 nodes, 261 edges (189 PSW, 141 SW)
+INFO |   L1L2_8/6-BJyuan-5-L1-8-8d0.3-52m.png: 304 nodes, 217 edges (137 PSW, 56 SW)
+INFO |   L1L2_8/6-BJyuan-6-L2-8d0.2-97m.png: 347 nodes, 249 edges (155 PSW, 95 SW)
+INFO |   L1L2_8/6-BJyuan-7-L1-8d0.2-32M.png: 275 nodes, 201 edges (128 PSW, 47 SW)
+INFO |   L1L2_8/6-BJyuan-8-L1-8d0.2-52M.png: 295 nodes, 198 edges (123 PSW, 47 SW)
+INFO |   L1L2_8/6-BJyuan-9-L2-8d0.2-78M.png: 222 nodes, 156 edges (104 PSW, 44 SW)
+INFO |   L1L2_8/8-huadong-case1-151m-8d-L2-8.png: 416 nodes, 282 edges (216 PSW, 79 SW)
+INFO |   L1L2_8/8-huadong-case2-135m-8d-L2-8.png: 322 nodes, 219 edges (189 PSW, 79 SW)
+INFO |   L1L2_8/8-huadong-case3-141m-8d-L2-8.png: 603 nodes, 440 edges (293 PSW, 196 SW)
+INFO |   L1L2_8/8-huadong-case4-141m-8d-L2-8.png: 599 nodes, 423 edges (277 PSW, 169 SW)
+INFO |   L1L2_8/longtrain (10).png: 371 nodes, 296 edges (150 PSW, 115 SW)
+INFO |   L1L2_8/longtrain (17).png: 278 nodes, 187 edges (122 PSW, 87 SW)
+INFO |   L1L2_8/longtrain (18).png: 276 nodes, 209 edges (119 PSW, 92 SW)
+INFO |   L1L2_8/longtrain (20).png: 385 nodes, 293 edges (178 PSW, 153 SW)
+INFO |   L1L2_8/longtrain (21).png: 284 nodes, 232 edges (157 PSW, 124 SW)
+INFO |   L1L2_8/longtrain (22).png: 343 nodes, 246 edges (99 PSW, 78 SW)
+INFO |   L1L2_8/longtrain (33).png: 376 nodes, 255 edges (136 PSW, 98 SW)
+INFO |   L1L2_8/longtrain (34).png: 369 nodes, 302 edges (171 PSW, 152 SW)
+INFO |   L1L2_8/longtrain (36).png: 315 nodes, 233 edges (134 PSW, 113 SW)
+INFO |   L1L2_8/longtrain (37).png: 385 nodes, 272 edges (136 PSW, 94 SW)
+INFO |   L1L2_8/longtrain (39).png: 271 nodes, 202 edges (111 PSW, 80 SW)
+INFO |   L1L2_8/longtrain (4).png: 216 nodes, 172 edges (108 PSW, 104 SW)
+INFO |   L1L2_8/longtrain (41).png: 333 nodes, 234 edges (139 PSW, 108 SW)
+INFO |   L1L2_8/longtrain (5).png: 212 nodes, 169 edges (101 PSW, 85 SW)
+INFO |   L1L2_8/longtrain (6).png: 236 nodes, 181 edges (101 PSW, 92 SW)
+INFO |   L1L2_8/longtrain (7).png: 212 nodes, 150 edges (99 PSW, 92 SW)
+INFO |   L1L2_8/shorttrain (45).png: 340 nodes, 248 edges (112 PSW, 87 SW)
+INFO |   L1L2_8/shorttrain (47).png: 242 nodes, 183 edges (84 PSW, 61 SW)
+INFO | Converted 167 samples from 3 groups
+INFO | Converting test data...
+INFO |   L1_7/test (1).png: 282 nodes, 193 edges (122 PSW, 59 SW)
+INFO |   L1_7/test (10).png: 302 nodes, 194 edges (136 PSW, 55 SW)
+INFO |   L1_7/test (11).png: 273 nodes, 177 edges (109 PSW, 79 SW)
+INFO |   L1_7/test (12).png: 241 nodes, 176 edges (130 PSW, 81 SW)
+INFO |   L1_7/test (13).png: 279 nodes, 182 edges (129 PSW, 72 SW)
+INFO |   L1_7/test (14).png: 332 nodes, 223 edges (155 PSW, 82 SW)
+INFO |   L1_7/test (15).png: 339 nodes, 234 edges (149 PSW, 114 SW)
+INFO |   L1_7/test (16).png: 339 nodes, 246 edges (155 PSW, 81 SW)
+INFO |   L1_7/test (17).png: 336 nodes, 239 edges (173 PSW, 113 SW)
+INFO |   L1_7/test (18).png: 255 nodes, 171 edges (126 PSW, 102 SW)
+INFO |   L1_7/test (19).png: 305 nodes, 217 edges (154 PSW, 123 SW)
+INFO |   L1_7/test (2).png: 321 nodes, 226 edges (158 PSW, 76 SW)
+INFO |   L1_7/test (20).png: 226 nodes, 160 edges (124 PSW, 92 SW)
+INFO |   L1_7/test (21).png: 308 nodes, 202 edges (136 PSW, 43 SW)
+INFO |   L1_7/test (22).png: 231 nodes, 159 edges (126 PSW, 92 SW)
+INFO |   L1_7/test (23).png: 332 nodes, 228 edges (165 PSW, 103 SW)
+INFO |   L1_7/test (24).png: 282 nodes, 212 edges (162 PSW, 119 SW)
+INFO |   L1_7/test (3).png: 316 nodes, 225 edges (158 PSW, 55 SW)
+INFO |   L1_7/test (4).png: 271 nodes, 215 edges (157 PSW, 94 SW)
+INFO |   L1_7/test (5).png: 265 nodes, 184 edges (140 PSW, 65 SW)
+INFO |   L1_7/test (6).png: 273 nodes, 204 edges (150 PSW, 53 SW)
+INFO |   L1_7/test (7).png: 219 nodes, 138 edges (86 PSW, 47 SW)
+INFO |   L1_7/test (8).png: 281 nodes, 205 edges (144 PSW, 87 SW)
+INFO |   L1_7/test (9).png: 294 nodes, 214 edges (113 PSW, 55 SW)
+INFO |   L2_7/test (1).png: 282 nodes, 193 edges (122 PSW, 59 SW)
+INFO |   L2_7/test (10).png: 302 nodes, 194 edges (136 PSW, 55 SW)
+INFO |   L2_7/test (11).png: 273 nodes, 177 edges (109 PSW, 79 SW)
+INFO |   L2_7/test (12).png: 241 nodes, 176 edges (130 PSW, 81 SW)
+INFO |   L2_7/test (13).png: 279 nodes, 182 edges (129 PSW, 72 SW)
+INFO |   L2_7/test (14).png: 332 nodes, 223 edges (155 PSW, 82 SW)
+INFO |   L2_7/test (15).png: 339 nodes, 234 edges (149 PSW, 114 SW)
+INFO |   L2_7/test (16).png: 339 nodes, 246 edges (155 PSW, 81 SW)
+INFO |   L2_7/test (17).png: 336 nodes, 239 edges (173 PSW, 113 SW)
+INFO |   L2_7/test (18).png: 255 nodes, 171 edges (126 PSW, 102 SW)
+INFO |   L2_7/test (19).png: 305 nodes, 217 edges (154 PSW, 123 SW)
+INFO |   L2_7/test (2).png: 321 nodes, 226 edges (158 PSW, 76 SW)
+INFO |   L2_7/test (20).png: 226 nodes, 160 edges (124 PSW, 92 SW)
+INFO |   L2_7/test (21).png: 308 nodes, 202 edges (136 PSW, 43 SW)
+INFO |   L2_7/test (22).png: 231 nodes, 159 edges (126 PSW, 92 SW)
+INFO |   L2_7/test (23).png: 332 nodes, 228 edges (165 PSW, 103 SW)
+INFO |   L2_7/test (24).png: 282 nodes, 212 edges (162 PSW, 119 SW)
+INFO |   L2_7/test (3).png: 316 nodes, 225 edges (158 PSW, 55 SW)
+INFO |   L2_7/test (4).png: 271 nodes, 215 edges (157 PSW, 94 SW)
+INFO |   L2_7/test (5).png: 265 nodes, 184 edges (140 PSW, 65 SW)
+INFO |   L2_7/test (6).png: 273 nodes, 204 edges (150 PSW, 53 SW)
+INFO |   L2_7/test (7).png: 219 nodes, 138 edges (86 PSW, 47 SW)
+INFO |   L2_7/test (8).png: 281 nodes, 205 edges (144 PSW, 87 SW)
+INFO |   L2_7/test (9).png: 294 nodes, 214 edges (113 PSW, 55 SW)
+INFO |   L1L2_8/test (1).png: 282 nodes, 193 edges (122 PSW, 59 SW)
+INFO |   L1L2_8/test (10).png: 302 nodes, 194 edges (136 PSW, 55 SW)
+INFO |   L1L2_8/test (11).png: 273 nodes, 177 edges (109 PSW, 79 SW)
+INFO |   L1L2_8/test (12).png: 241 nodes, 176 edges (130 PSW, 81 SW)
+INFO |   L1L2_8/test (13).png: 279 nodes, 182 edges (129 PSW, 72 SW)
+INFO |   L1L2_8/test (14).png: 332 nodes, 223 edges (155 PSW, 82 SW)
+INFO |   L1L2_8/test (15).png: 339 nodes, 234 edges (149 PSW, 114 SW)
+INFO |   L1L2_8/test (16).png: 339 nodes, 246 edges (155 PSW, 81 SW)
+INFO |   L1L2_8/test (17).png: 336 nodes, 239 edges (173 PSW, 113 SW)
+INFO |   L1L2_8/test (18).png: 255 nodes, 171 edges (126 PSW, 102 SW)
+INFO |   L1L2_8/test (19).png: 305 nodes, 217 edges (154 PSW, 123 SW)
+INFO |   L1L2_8/test (2).png: 321 nodes, 226 edges (158 PSW, 76 SW)
+INFO |   L1L2_8/test (20).png: 226 nodes, 160 edges (124 PSW, 92 SW)
+INFO |   L1L2_8/test (21).png: 308 nodes, 202 edges (136 PSW, 43 SW)
+INFO |   L1L2_8/test (22).png: 231 nodes, 159 edges (126 PSW, 92 SW)
+INFO |   L1L2_8/test (23).png: 332 nodes, 228 edges (165 PSW, 103 SW)
+INFO |   L1L2_8/test (24).png: 282 nodes, 212 edges (162 PSW, 119 SW)
+INFO |   L1L2_8/test (3).png: 316 nodes, 225 edges (158 PSW, 55 SW)
+INFO |   L1L2_8/test (4).png: 271 nodes, 215 edges (157 PSW, 94 SW)
+INFO |   L1L2_8/test (5).png: 265 nodes, 184 edges (140 PSW, 65 SW)
+INFO |   L1L2_8/test (6).png: 273 nodes, 204 edges (150 PSW, 53 SW)
+INFO |   L1L2_8/test (7).png: 219 nodes, 138 edges (86 PSW, 47 SW)
+INFO |   L1L2_8/test (8).png: 281 nodes, 205 edges (144 PSW, 87 SW)
+INFO |   L1L2_8/test (9).png: 294 nodes, 214 edges (113 PSW, 55 SW)
+INFO | Converted 72 samples from 3 groups
+INFO | Training GNN-EP-4...
+INFO |   Best val L1=0.5218 recall=0.977  Saved: train/gnn_ep4.pt
+INFO | Epoch   1/200  train_L1=0.2627  val_L1=0.5218  val_IoU=0.5662@0.10  val_SW_recall=0.977  lr=0.001000
+INFO |   Best val L1=0.5134 recall=0.925  Saved: train/gnn_ep4.pt
+INFO |   Best val L1=0.5053 recall=0.993  Saved: train/gnn_ep4.pt
+INFO |   Best val L1=0.5034 recall=0.912  Saved: train/gnn_ep4.pt
+INFO | Epoch  10/200  train_L1=0.2579  val_L1=0.5170  val_IoU=0.5748@0.05  val_SW_recall=0.993  lr=0.000994
+INFO |   Best val L1=0.4896 recall=0.762  Saved: train/gnn_ep4.pt
+INFO | Epoch  20/200  train_L1=0.2568  val_L1=0.5159  val_IoU=0.5748@0.05  val_SW_recall=1.000  lr=0.000976
+INFO |   Best val L1=0.4893 recall=0.926  Saved: train/gnn_ep4.pt
+INFO | Epoch  30/200  train_L1=0.2517  val_L1=0.5635  val_IoU=0.5748@0.05  val_SW_recall=0.876  lr=0.000946
+INFO |   Best val L1=0.4817 recall=0.508  Saved: train/gnn_ep4.pt
+INFO | Epoch  40/200  train_L1=0.2551  val_L1=0.5312  val_IoU=0.5748@0.05  val_SW_recall=0.910  lr=0.000905
+INFO | Epoch  50/200  train_L1=0.2499  val_L1=0.4789  val_IoU=0.5748@0.05  val_SW_recall=0.354  lr=0.000854
+INFO | Epoch  60/200  train_L1=0.2436  val_L1=0.5195  val_IoU=0.5221@0.05  val_SW_recall=0.738  lr=0.000794
+INFO | Epoch  70/200  train_L1=0.2560  val_L1=0.5109  val_IoU=0.5739@0.05  val_SW_recall=0.984  lr=0.000727
+INFO | Epoch  80/200  train_L1=0.2476  val_L1=0.5041  val_IoU=0.5727@0.05  val_SW_recall=0.780  lr=0.000655
+INFO | Epoch  90/200  train_L1=0.2398  val_L1=0.5286  val_IoU=0.4758@0.05  val_SW_recall=0.667  lr=0.000578
+INFO | Epoch 100/200  train_L1=0.2401  val_L1=0.5181  val_IoU=0.4722@0.05  val_SW_recall=0.628  lr=0.000500
+INFO | Epoch 110/200  train_L1=0.2409  val_L1=0.5478  val_IoU=0.5042@0.05  val_SW_recall=0.698  lr=0.000422
+INFO | Epoch 120/200  train_L1=0.2569  val_L1=0.5378  val_IoU=0.5362@0.05  val_SW_recall=0.899  lr=0.000345
+INFO | Epoch 130/200  train_L1=0.2429  val_L1=0.5629  val_IoU=0.5612@0.05  val_SW_recall=0.842  lr=0.000273
+INFO | Epoch 140/200  train_L1=0.2376  val_L1=0.5728  val_IoU=0.5667@0.05  val_SW_recall=0.888  lr=0.000206
+INFO | Epoch 150/200  train_L1=0.2380  val_L1=0.5756  val_IoU=0.5725@0.05  val_SW_recall=0.968  lr=0.000146
+INFO | Epoch 160/200  train_L1=0.2366  val_L1=0.5823  val_IoU=0.5749@0.05  val_SW_recall=0.993  lr=0.000095
+INFO | Epoch 170/200  train_L1=0.2363  val_L1=0.5689  val_IoU=0.5725@0.05  val_SW_recall=0.975  lr=0.000054
+INFO | Epoch 180/200  train_L1=0.2357  val_L1=0.5371  val_IoU=0.5740@0.05  val_SW_recall=0.909  lr=0.000024
+INFO | Epoch 190/200  train_L1=0.2354  val_L1=0.5691  val_IoU=0.5746@0.05  val_SW_recall=0.975  lr=0.000006
+INFO | Epoch 200/200  train_L1=0.2355  val_L1=0.5438  val_IoU=0.5742@0.05  val_SW_recall=0.919  lr=0.000000
+INFO | Best val L1: 0.4817  IoU: 0.5748 @ thresh=0.05  Saved: train/gnn_ep4.pt
+
+============================================================
+  DATASET SUMMARY
+============================================================
+  Train: 167 graphs
+  Test:  72 graphs
+  Total PSW edges (train): 22546
+  Total SW edges (train):  14336 (64%)
+  Avg nodes/graph: 289.5
+  Avg edges/graph: 209.9
+============================================================
+Epoch   1/200  train_L1=0.2627  val_L1=0.5218  val_IoU=0.5662@0.10  val_SW_recall=0.977  lr=0.001000
+Epoch  10/200  train_L1=0.2579  val_L1=0.5170  val_IoU=0.5748@0.05  val_SW_recall=0.993  lr=0.000994
+Epoch  20/200  train_L1=0.2568  val_L1=0.5159  val_IoU=0.5748@0.05  val_SW_recall=1.000  lr=0.000976
+Epoch  30/200  train_L1=0.2517  val_L1=0.5635  val_IoU=0.5748@0.05  val_SW_recall=0.876  lr=0.000946
+Epoch  40/200  train_L1=0.2551  val_L1=0.5312  val_IoU=0.5748@0.05  val_SW_recall=0.910  lr=0.000905
+Epoch  50/200  train_L1=0.2499  val_L1=0.4789  val_IoU=0.5748@0.05  val_SW_recall=0.354  lr=0.000854
+Epoch  60/200  train_L1=0.2436  val_L1=0.5195  val_IoU=0.5221@0.05  val_SW_recall=0.738  lr=0.000794
+Epoch  70/200  train_L1=0.2560  val_L1=0.5109  val_IoU=0.5739@0.05  val_SW_recall=0.984  lr=0.000727
+Epoch  80/200  train_L1=0.2476  val_L1=0.5041  val_IoU=0.5727@0.05  val_SW_recall=0.780  lr=0.000655
+Epoch  90/200  train_L1=0.2398  val_L1=0.5286  val_IoU=0.4758@0.05  val_SW_recall=0.667  lr=0.000578
+Epoch 100/200  train_L1=0.2401  val_L1=0.5181  val_IoU=0.4722@0.05  val_SW_recall=0.628  lr=0.000500
+Epoch 110/200  train_L1=0.2409  val_L1=0.5478  val_IoU=0.5042@0.05  val_SW_recall=0.698  lr=0.000422
+Epoch 120/200  train_L1=0.2569  val_L1=0.5378  val_IoU=0.5362@0.05  val_SW_recall=0.899  lr=0.000345
+Epoch 130/200  train_L1=0.2429  val_L1=0.5629  val_IoU=0.5612@0.05  val_SW_recall=0.842  lr=0.000273
+Epoch 140/200  train_L1=0.2376  val_L1=0.5728  val_IoU=0.5667@0.05  val_SW_recall=0.888  lr=0.000206
+Epoch 150/200  train_L1=0.2380  val_L1=0.5756  val_IoU=0.5725@0.05  val_SW_recall=0.968  lr=0.000146
+Epoch 160/200  train_L1=0.2366  val_L1=0.5823  val_IoU=0.5749@0.05  val_SW_recall=0.993  lr=0.000095
+Epoch 170/200  train_L1=0.2363  val_L1=0.5689  val_IoU=0.5725@0.05  val_SW_recall=0.975  lr=0.000054
+Epoch 180/200  train_L1=0.2357  val_L1=0.5371  val_IoU=0.5740@0.05  val_SW_recall=0.909  lr=0.000024
+Epoch 190/200  train_L1=0.2354  val_L1=0.5691  val_IoU=0.5746@0.05  val_SW_recall=0.975  lr=0.000006
+Epoch 200/200  train_L1=0.2355  val_L1=0.5438  val_IoU=0.5742@0.05  val_SW_recall=0.919  lr=0.000000
+
+Training complete. Best model saved to train/gnn_ep4.pt
+Optimal SW threshold: 0.05

@@ -1,0 +1,67 @@
+# ---------------------------------------------------------------- environment
+venv/
+.claude/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# ------------------------------------------------------- third-party datasets
+# Not redistributable. See release/DATA_AVAILABILITY.md for how to obtain each.
+cubicasa5k/
+cubicasa5k.zip
+data/
+train/data/
+
+# StructGAN-derived intermediates: these encode the third-party corpus and are
+# excluded for the same reason as the corpus itself.
+train/converted_dataset.json
+train/cache_*.pkl
+
+# ------------------------------------------------------------ large artefacts
+# The Stage-1 segmentation checkpoint is 257 MB, over GitHub's 100 MB file
+# limit. It is distributed through the Zenodo record; release/checkpoints/
+# carries its SHA-256 so a download can be verified.
+*.pth
+
+# --------------------------------------------------------------- sweep output
+# Regenerable, and the MSD sweep alone is several thousand directories.
+results/
+
+# ----------------------------------------------------- evaluation plan images
+# Held back pending the provenance audit (reviewer comment 33): the source and
+# licence of these ten drawings are not yet established, so they are not
+# published here. Restore this directory once provenance is confirmed.
+images/
+
+# --------------------------------------------------------- manuscript drafts
+*.docx
+*.pdf
+*.pptx
+
+# ------------------------------------------ per-stage debug output, not source
+# Left in the working tree by hand-runs of individual stages.
+stages/**/enr*.json
+stages/**/floor_enriched*.json
+stages/**/floor_output*.json
+stages/**/graph_output.json
+stages/**/*_vis.png
+stages/**/*_vis2.png
+
+# Internal development notes describing a superseded design (edge-only GNN,
+# geometric column placement). Superseded by the manuscript; excluded so the
+# repository does not ship a document that contradicts it.
+REVIEW_AND_ROADMAP.md
+
+# Local maintenance helper that deletes generated files; not part of the release.
+cleanup.ps1
+
+# ------------------------------------------------------- scratch pipeline run
+/floor_output.json
+/floor_output_unconsolidated.json
+/model_fem.json
+/floor_visualization.png
+/model_fem_vis.png
+/output_mask*.png
+/output_preprocessed.png

@@ -1,0 +1,18 @@
+{
+  "title": "Plan-to-FEM: reproducibility deposit",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Papapostolou, Christos"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "graph neural network",
+    "finite element model generation",
+    "floor plan",
+    "structural engineering",
+    "automation in construction"
+  ],
+  "notes": "Companion deposit to the manuscript submitted to Automation in Construction. Third-party datasets (StructGAN, CubiCasa5K, Modified Swiss Dwellings) are referenced rather than redistributed; see DATA_AVAILABILITY.md."
+}

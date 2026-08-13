@@ -1,0 +1,22 @@
+[
+  {
+    "path": "stages/stage_1/mitunet_finetune_a6_mit_b4_tversky_8864_28E.pth",
+    "bytes": 257383307,
+    "sha256": "9c56c86723b0b5099ea63c82b5cac2f9c98c1816536003a78e422b7fcfadfbaf"
+  },
+  {
+    "path": "train/gnn_multi1.pt",
+    "bytes": 85873,
+    "sha256": "4d6645885bf1379041b73e1e52a4b5df8d69841af46f6a2c37a925a5f654a111"
+  },
+  {
+    "path": "train/gnn_multi.pt",
+    "bytes": 85873,
+    "sha256": "3297ae799f276749b4ebbabc6476dff17e1b7505e9e723159b8b632e2795c95c"
+  },
+  {
+    "path": "train/gnn_ep4.pt",
+    "bytes": 77847,
+    "sha256": "2bd63fadd4bdf0c31a7276c4a10708e18f12a59e04cbad33ce604f22c5e8e230"
+  }
+]
