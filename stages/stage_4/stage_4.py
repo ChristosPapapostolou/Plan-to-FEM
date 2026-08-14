@@ -1568,6 +1568,17 @@ def main():
     # Stage 3: build graph
     G = build_graph_from_stage2(floor, proximity_tol_m=args.proximity_tol)
 
+    # A plan whose vectorisation recovered no wall geometry yields an empty
+    # graph. Enrichment then reaches normalize_graph with a zero-length
+    # coordinate array and dies inside numpy; report the real condition
+    # instead. Seen on MSD plan 1453, whose mask is 2.6% wall pixels and whose
+    # only wall is rejected by Stage 2 as having no valid segments.
+    if G.number_of_nodes() == 0:
+        logger.error("No wall geometry recovered from %s: the graph is empty, "
+                     "so there is nothing to enrich. This is a Stage 2 outcome, "
+                     "not a Stage 4 failure.", args.input)
+        return 2
+
     # Stage 4: enrichment
     pipe = StructuralEnrichmentPipeline(
         sw_threshold=args.sw_threshold,
@@ -1650,4 +1661,4 @@ def main():
 
 
 if __name__ == "__main__":
-       main()
+       raise SystemExit(main())
