@@ -7,7 +7,7 @@ Code accompanying the manuscript submitted to *Automation in Construction*.
 
 ## What it does
 
-A single raster floor-plan image is converted into a solver-ready
+A single raster floor-plan image is converted into a
 three-dimensional finite element model through five stages, each of which
 writes one inspectable artefact:
 
@@ -23,11 +23,38 @@ A six-check heuristic module then scores the exported model for structural
 coherence: lateral-line count, stiffness eccentricity, beam support, slab span,
 column continuity and orphan nodes.
 
-**The pipeline automates model generation, not structural design and not
-verified analysis.** No model it produces is solved, checked against a code, or
-signed. A coherence score of 1.0 means the six heuristic checks passed; it is
-not a statement of structural safety or adequacy, and it does not reduce the
-need for engineer review.
+**The pipeline automates model generation, not structural design.** A coherence
+score of 1.0 means the six heuristic checks passed; it is not a statement of
+structural safety or adequacy, and it does not reduce the need for engineer
+review.
+
+### Independent solver check
+
+`tools/opensees_check.py` rebuilds an exported model in OpenSeesPy and runs
+gravity, modal and equivalent-lateral-force analyses; it reports floating
+members (no element path to the base), deflections, periods, wall shear shares,
+torsion ratios and the equilibrium error. `tools/opensees_batch.py` runs it over
+a directory of models. This is a linear plausibility check, not a code-compliant
+design.
+
+### Joint connectivity and orientation
+
+- `etabs/connect.py` merges member ends onto shared joints so that every member
+  has a load path; it is on by default (`--no-connect` disables it).
+- Stages 2 and 4, the exporter and the coherence checks work in the principal
+  frame of the wall layout, so plans drawn rotated on the sheet keep their wall
+  directions; `--no-principal-frame` restores drawing-axis processing. For
+  drawings within 5 degrees of the axes the step is inactive.
+
+### Outputs behind the paper
+
+`release/outputs/` holds the machine-readable outputs read by the manuscript:
+`numbers.json` (every number and table in the text), `figdata.json` (figure
+data), `msd_per_plan.csv` (per-plan scores, checks and solver results for the
+4,572 MSD plans), `msd_onmask.csv`, `solve_ten_plans.jsonl`,
+`solve_msd150_without_connectivity.jsonl` and `msd_gallery_selection.json`.
+`release/analysis/paper/` contains the MSD sweep worker and the aggregation
+script that produced them (paths at the top of each script must be set).
 
 ## Layout
 

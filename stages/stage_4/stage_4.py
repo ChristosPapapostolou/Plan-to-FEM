@@ -1518,6 +1518,78 @@ def visualize_gnn_graph(mi, out_path,
 # 8. CLI entry point
 # =============================================================================
 
+
+# =============================================================================
+# Principal frame (orientation): the graph construction, the run grouping and the
+# shear-wall selector work along two orthogonal plan axes, and the network was trained
+# on axis-aligned drawings.  A plan drawn rotated on the sheet is therefore rotated into
+# the dominant direction of its walls before Stages 3-4 and the output is rotated back.
+# =============================================================================
+PRINCIPAL_TOL_DEG = 5.0
+
+
+def dominant_wall_angle(floor) -> float:
+    """Length-weighted dominant wall direction in degrees, in (-45, 45], from the circular
+    mean of 4*phi (directions phi and phi + 90 deg count as the same)."""
+    sx = sy = 0.0
+    for w in floor.get("walls", []):
+        if w.get("rejected"):
+            continue
+        pts = {p["id"]: (p["x"], p["y"]) for p in w.get("points", [])}
+        for r in w.get("rects", []):
+            a, b = pts.get(r["p1_id"]), pts.get(r["p2_id"])
+            if a is None or b is None:
+                continue
+            L = math.hypot(b[0] - a[0], b[1] - a[1])
+            phi = math.atan2(b[1] - a[1], b[0] - a[0])
+            sx += L * math.cos(4 * phi); sy += L * math.sin(4 * phi)
+    if sx == 0.0 and sy == 0.0:
+        return 0.0
+    return math.degrees(math.atan2(sy, sx) / 4.0)
+
+
+def _rotate_floor(floor, theta_deg, cx, cy, columns=False):
+    c, s = math.cos(math.radians(theta_deg)), math.sin(math.radians(theta_deg))
+    for w in floor.get("walls", []):
+        for p in w.get("points", []):
+            x, y = p["x"] - cx, p["y"] - cy
+            p["x"], p["y"] = cx + c * x - s * y, cy + s * x + c * y
+        for r in w.get("rects", []):
+            if "angle_rad" in r:
+                r["angle_rad"] = (r["angle_rad"] + math.radians(theta_deg)) % math.pi
+    if columns:
+        for col in floor.get("columns", []) or []:
+            x, y = col["x"] - cx, col["y"] - cy
+            col["x"], col["y"] = cx + c * x - s * y, cy + s * x + c * y
+
+
+def to_principal_frame(floor, tol_deg: float = PRINCIPAL_TOL_DEG):
+    """Return (floor in its principal frame, frame) or (floor, None) when the plan is already
+    within tol_deg of the drawing axes.  The input is not modified."""
+    import copy
+    theta = dominant_wall_angle(floor)
+    if abs(theta) <= tol_deg:
+        return floor, None
+    pts = [(p["x"], p["y"]) for w in floor.get("walls", []) for p in w.get("points", [])]
+    cx = sum(p[0] for p in pts) / len(pts); cy = sum(p[1] for p in pts) / len(pts)
+    f2 = copy.deepcopy(floor)
+    _rotate_floor(f2, -theta, cx, cy)
+    return f2, dict(theta_deg=round(theta, 4), cx=cx, cy=cy)
+
+
+def from_principal_frame(enriched, frame):
+    """Rotate an enriched floor (wall points, rect angles, predicted columns) back to the drawing
+    frame.  rene_features stay in the principal frame in which the network saw them."""
+    _rotate_floor(enriched, frame["theta_deg"], frame["cx"], frame["cy"], columns=True)
+    for w in enriched.get("walls", []):
+        for p in w.get("points", []):
+            p["x"], p["y"] = round(p["x"], 4), round(p["y"], 4)
+    for col in enriched.get("columns", []) or []:
+        col["x"], col["y"] = round(col["x"], 4), round(col["y"], 4)
+    enriched["principal_frame"] = dict(frame, note="Stages 3-4 ran in this frame; rene_features are in it")
+    return enriched
+
+
 def main():
     ap = argparse.ArgumentParser(description="Stage 4 - Structural Enrichment")
     ap.add_argument("-i", "--input", default="C:\\Dev\\Plan_2_FEM_2026\\floor_output.json",
@@ -1553,6 +1625,8 @@ def main():
                          "for taller buildings")
     ap.add_argument("--sw-threshold", type=float, default=0.10,
                     help="Score threshold for shear-wall classification (default: 0.10)")
+    ap.add_argument("--no-principal-frame", action="store_true",
+                    help="Run Stages 3-4 in the drawing axes (behaviour before the orientation fix)")
     args = ap.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(message)s")
@@ -1564,6 +1638,11 @@ def main():
     with open(inp) as f:
         floor = json.load(f)
     logger.info("Loaded Stage 2: %d walls", len(floor.get("walls", [])))
+    frame = None
+    if not args.no_principal_frame:
+        floor, frame = to_principal_frame(floor)
+        if frame:
+            logger.info("Principal frame: plan rotated by %.2f deg for Stages 3-4", -frame["theta_deg"])
 
     # Stage 3: build graph
     G = build_graph_from_stage2(floor, proximity_tol_m=args.proximity_tol)
@@ -1629,6 +1708,9 @@ def main():
         for c in result["gnn_columns"][:20]:
             v = " (virtual)" if c.get("virtual") else ""
             print(f"    ({c['x']:6.2f},{c['y']:6.2f})  p={c['p']:.3f}{v}")
+
+    if frame:
+        from_principal_frame(result["enriched_json"], frame)
 
     # Export
     base = os.path.dirname(os.path.abspath(__file__))

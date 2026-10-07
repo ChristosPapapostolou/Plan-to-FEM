@@ -226,8 +226,23 @@ class ETABSExporter:
         boundary_columns: bool = True,
         column_mode: str = "grid",
         max_span_m: float = 6.0,
+        connect_joints: bool = True,
+        max_beam_run_m: Optional[float] = None,
+        principal_frame: bool = True,
+        axis_tol_deg: float = 5.0,
+        snap_tol_m: float = 0.30,
     ):
         self.data = enriched_json
+        # Orientation: the pier, grid, beam and column rules work along two orthogonal plan axes.  With
+        # principal_frame the plan is rotated into its dominant wall direction before the model is built
+        # and the nodes are rotated back afterwards, so a rotated building is treated like an
+        # axis-aligned one.  Piers that still deviate from the frame axes by more than axis_tol_deg keep
+        # their own direction instead of being projected onto an axis.
+        self.principal_frame = principal_frame
+        self.axis_tol_deg = axis_tol_deg
+        self.snap_tol_m = snap_tol_m       # largest end-point move allowed when a pier is snapped to an axis
+        self.frame_angle_deg = 0.0
+        self._frame = None
         self.n_stories = n_stories
         self.floor_h = floor_height_m or enriched_json.get("floor_height_m", 2.8)
         self.base_z = base_z
@@ -276,6 +291,12 @@ class ETABSExporter:
         #   "corner" : legacy behaviour (column at every footprint corner).
         self.column_mode = column_mode
         self.max_span = max_span_m
+        # Joint connectivity (etabs/connect.py): snap beam ends onto supports, merge near-support joints,
+        # posts under unsupported corner joints and on unsupported beam runs longer than max_beam_run.
+        self.connect_joints = connect_joints
+        self.max_beam_run = max_span_m if max_beam_run_m is None else max_beam_run_m
+        self.connect_stats = {}
+        self._in_repair = False
         self._grid = None            # GridResult from structural_grid
         self._grid_beam_lines = []   # interior beam spans [((x1,y1),(x2,y2))]
 
@@ -300,6 +321,8 @@ class ETABSExporter:
         """Convert 2D enriched floor plan to 3D structural model."""
         logger.info("Building 3D model: %d stories x %.1fm",
                     self.n_stories, self.floor_h)
+        if self.principal_frame:
+            self._enter_principal_frame()
 
         edge_preds = self.data.get("edge_predictions", {})
 
@@ -424,7 +447,13 @@ class ETABSExporter:
         # wall panel edge, or another beam gets a gravity post underneath
         # (mirrors the step-5 sanity check exactly, so it cannot miss).
         if self.add_columns:
-            self._ensure_beam_supports()
+            if self.connect_joints:
+                self._connect_joints()
+            else:
+                self._ensure_beam_supports()
+
+        if self._frame is not None:
+            self._leave_principal_frame()
 
         n_sw = sum(1 for wp in self.wall_panels if wp.is_shear_wall)
         n_nw = len(self.wall_panels) - n_sw
@@ -432,6 +461,34 @@ class ETABSExporter:
                     "%d beams, %d slabs",
                     len(self.nodes), len(self.wall_panels), n_sw, n_nw,
                     len(self.frame_members), len(self.slabs))
+
+    def _connect_joints(self, tol: float = 0.20):
+        """Make the exported topology connected through shared joints (see etabs/connect.py).
+
+        An FE package joins elements only where they share a node.  Beam ends that merely lie within `tol`
+        of a support, slab-outline corners a few millimetres off a wall corner, and long beam-on-beam runs
+        otherwise leave sub-assemblies without a load path to the base.  Order: snap dangling beam ends ->
+        post under any end with nothing within tol -> snap again -> merge near-support joints and post
+        unsupported corner joints -> limit unsupported beam runs to max_beam_run -> snap again -> drop
+        orphan joints.  Counts are kept in self.connect_stats and written next to the JSON export.
+        """
+        try:
+            from . import connect as _cn
+        except ImportError:
+            import sys as _sys
+            _here = os.path.dirname(os.path.abspath(__file__))
+            if _here not in _sys.path:
+                _sys.path.insert(0, _here)
+            import connect as _cn
+        s1 = _cn.connect_model(self, tol=tol)
+        self._ensure_beam_supports(tol=tol)
+        s2 = _cn.connect_model(self, tol=tol)
+        s3 = _cn.support_joints(self, tol=tol)
+        s5 = _cn.limit_spans(self, max_span=self.max_beam_run) if self.max_beam_run and self.max_beam_run > 0 else {}
+        s4 = _cn.connect_model(self, tol=tol)
+        n_orph = _cn.drop_orphan_nodes(self)
+        self.connect_stats = {"pass1": s1, "pass2": s2, "joints": s3, "spans": s5, "pass3": s4,
+                              "orphan_nodes_removed": n_orph}
 
     def _ensure_beam_supports(self, tol: float = 0.20):
         """Add a post under every otherwise-unsupported beam end.
@@ -755,6 +812,93 @@ class ETABSExporter:
     # Columns: pier consolidation, short-pier demotion, boundary + corner
     # ------------------------------------------------------------------
 
+    # ------------------------------------------------------------------
+    # Principal frame
+    # ------------------------------------------------------------------
+    @staticmethod
+    def dominant_angle(segments):
+        """Length-weighted dominant direction (degrees, in (-45, 45]) of a set of 2-D segments,
+        from the circular mean of 4*phi, so walls at phi and phi + 90 deg reinforce each other."""
+        sx = sy = 0.0
+        for (x1, y1), (x2, y2) in segments:
+            L = math.hypot(x2 - x1, y2 - y1)
+            if L < 1e-9:
+                continue
+            phi = math.atan2(y2 - y1, x2 - x1)
+            sx += L * math.cos(4 * phi); sy += L * math.sin(4 * phi)
+        if sx == 0.0 and sy == 0.0:
+            return 0.0
+        return math.degrees(math.atan2(sy, sx) / 4.0)
+
+    def _enter_principal_frame(self):
+        """Rotate the enriched plan (wall points, predicted columns) by -theta about its centroid when
+        its dominant wall direction deviates from the x axis by more than axis_tol_deg."""
+        import copy
+        segs, allp = [], []
+        for w in self.data.get("walls", []):
+            if w.get("rejected"):
+                continue
+            pts = {p["id"]: (p["x"], p["y"]) for p in w.get("points", [])}
+            for r in w.get("rects", []):
+                a, b = pts.get(r["p1_id"]), pts.get(r["p2_id"])
+                if a is not None and b is not None:
+                    segs.append((a, b)); allp += [a, b]
+        theta = self.dominant_angle(segs)
+        if abs(theta) <= self.axis_tol_deg or not allp:
+            return
+        cx = sum(p[0] for p in allp) / len(allp); cy = sum(p[1] for p in allp) / len(allp)
+        c, s = math.cos(math.radians(-theta)), math.sin(math.radians(-theta))
+        rot = lambda x, y: (cx + c * (x - cx) - s * (y - cy), cy + s * (x - cx) + c * (y - cy))
+        data = copy.deepcopy(self.data)
+        for w in data.get("walls", []):
+            for p in w.get("points", []):
+                p["x"], p["y"] = rot(p["x"], p["y"])
+        for col in data.get("columns", []) or []:
+            if "x" in col and "y" in col:
+                col["x"], col["y"] = rot(col["x"], col["y"])
+        self.data = data
+        self._frame = (theta, cx, cy)
+        self.frame_angle_deg = round(theta, 3)
+        logger.info("  principal frame: plan rotated by %.2f deg for the build", -theta)
+
+    def _leave_principal_frame(self):
+        """Rotate every node back by +theta (the inverse of _enter_principal_frame)."""
+        theta, cx, cy = self._frame
+        c, s = math.cos(math.radians(theta)), math.sin(math.radians(theta))
+        for n in self.nodes.values():
+            x, y = n.x - cx, n.y - cy
+            n.x = round(cx + c * x - s * y, 4); n.y = round(cy + s * x + c * y, 4)
+        self._frame = None
+
+    def _split_bent_groups(self, groups, tol_m: float = 0.50):
+        """A Stage-4 pier group is meant to be one collinear run.  Groups whose member end points lie
+        more than tol_m off their common line (parallel offset walls, bends) are split into straight
+        clusters, each emitted as its own pier, instead of being collapsed onto one averaged line."""
+        out = {}
+        for key, members in groups.items():
+            P = np.array([p for r in members for p in (r["p1"], r["p2"])], float)
+            c = P.mean(axis=0)
+            vt = np.linalg.svd(P - c)[2]
+            if len(members) < 2 or np.abs((P - c) @ vt[1]).max() <= tol_m:
+                out[key] = members
+                continue
+            clusters = []          # [origin, unit direction, members]
+            for r in sorted(members, key=lambda r: -math.dist(r["p1"], r["p2"])):
+                a, b = np.array(r["p1"], float), np.array(r["p2"], float)
+                d = b - a; L = float(np.hypot(*d)); d = d / L if L > 1e-9 else np.array([1.0, 0.0])
+                for cl in clusters:
+                    o, u, mem = cl
+                    nrm = np.array([-u[1], u[0]])
+                    if (abs(float(np.dot(d, u))) >= math.cos(math.radians(self.axis_tol_deg))
+                            and abs(float(np.dot(a - o, nrm))) <= tol_m and abs(float(np.dot(b - o, nrm))) <= tol_m):
+                        mem.append(r); break
+                else:
+                    clusters.append([a, d, [r]])
+            for k, (_o, _u, mem) in enumerate(clusters):
+                # the Stage-4 pier length refers to the whole group, not to this cluster
+                out[key if k == 0 else f"{key}.{k}"] = [dict(r, pier_len=None) for r in mem]
+        return out
+
     def _build_piers(self, rects_2d):
         """Group selected shear-wall rects into continuous piers.
 
@@ -769,6 +913,9 @@ class ETABSExporter:
             key = r["pier_id"] if r["pier_id"] is not None else f"rect:{r['rect_id']}"
             groups.setdefault(key, []).append(r)
 
+        if self.principal_frame:
+            groups = self._split_bent_groups(groups, tol_m=self.snap_tol_m)
+
         piers = []
         for key, members in groups.items():
             xs, ys = [], []
@@ -777,7 +924,20 @@ class ETABSExporter:
                 ys += [r["p1"][1], r["p2"][1]]
             dx, dy = max(xs) - min(xs), max(ys) - min(ys)
             thickness = max(r["thickness"] for r in members)
-            if dx >= dy:                       # horizontal pier
+            P = np.column_stack([xs, ys]).astype(float)
+            c = P.mean(axis=0)
+            d = np.linalg.svd(P - c)[2][0]
+            ang = math.degrees(math.atan2(abs(d[1]), abs(d[0])))
+            perp = np.array(ys if dx >= dy else xs, float)
+            snap_move = float(np.abs(perp - perp.mean()).max())
+            if self.principal_frame and (min(ang, 90.0 - ang) > self.axis_tol_deg or snap_move > self.snap_tol_m):
+                # off-axis pier (or one that snapping would move by more than snap_tol_m): straight
+                # end-to-end panel along its own principal line
+                t = (P - c) @ d
+                a, b = c + d * t.min(), c + d * t.max()
+                ends = (float(a[0]), float(a[1]), float(b[0]), float(b[1]))
+                length = float(t.max() - t.min())
+            elif dx >= dy:                     # horizontal pier
                 ymean = sum(ys) / len(ys)
                 ends = (min(xs), ymean, max(xs), ymean)
                 length = dx
@@ -1352,6 +1512,7 @@ class ETABSExporter:
                 "floor_height_m": self.floor_h,
                 "concrete_fc_mpa": self.fc,
                 "wall_mode": self.wall_mode,
+                "frame_angle_deg": self.frame_angle_deg,
             },
             "stories": self.stories,
             "materials": [{
@@ -1537,6 +1698,15 @@ def main():
     parser.add_argument("--max-span", type=float, default=6.0,
                         help="Max slab/beam span (m) before intermediate "
                              "columns are inserted")
+    parser.add_argument("--no-connect", action="store_true",
+                        help="Skip the joint-connectivity step (etabs/connect.py); "
+                             "reproduces the exporter used before October 2026")
+    parser.add_argument("--max-beam-run", type=float, default=None,
+                        help="Longest unsupported beam run (m) before a gravity post is "
+                             "inserted (default: --max-span; 0 disables)")
+    parser.add_argument("--no-principal-frame", action="store_true",
+                        help="Build in the drawing axes and project every pier onto x or y; "
+                             "reproduces the exporter used before the orientation fix")
     parser.add_argument("--push-etabs", action="store_true",
                         help="Push to live ETABS instance")
     parser.add_argument("--etabs-save", default=None,
@@ -1574,10 +1744,16 @@ def main():
         boundary_columns=not args.no_boundary_columns,
         column_mode=args.column_mode,
         max_span_m=args.max_span,
+        connect_joints=not args.no_connect,
+        max_beam_run_m=args.max_beam_run,
+        principal_frame=not args.no_principal_frame,
     )
     exporter.build_model()
     exporter.print_summary()
     exporter.export_json(args.output)
+    if exporter.connect_stats:
+        with open(os.path.splitext(args.output)[0] + ".connect.json", "w") as f:
+            json.dump(exporter.connect_stats, f, indent=1)
 
     if args.push_etabs:
         exporter.push_to_etabs(

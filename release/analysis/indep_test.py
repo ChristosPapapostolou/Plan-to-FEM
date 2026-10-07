@@ -24,7 +24,7 @@ import train_gnn_multi as T
 from gnn_ep import nms_points, match_points, load_checkpoint
 
 SCR = r"C:\Users\OFFICE~1\AppData\Local\Temp\claude\D--Scada-chatbot\4fb47394-3717-4810-8c4b-ca6040e2bb42\scratchpad"
-CKPT = os.path.join(ROOT, "train", "gnn_multi.pt")
+CKPT = os.path.join(ROOT, "train", "gnn_multi1.pt")   # deployed checkpoint (Table 9)
 TEST_SEED = 101
 N_TEST = 60
 

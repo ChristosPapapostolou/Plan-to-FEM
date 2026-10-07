@@ -81,8 +81,10 @@ def main():
         wl_storey = 0.0
         for wp in M.get("wall_panels", []):
             ns = [nid[i] for i in wp["nodes"]]
-            L = max(float(np.linalg.norm(ns[1] - ns[0])),
-                    float(np.linalg.norm(ns[2] - ns[1])))
+            # horizontal pier length = plan extent of the panel; max(bottom edge, vertical edge)
+            # counted every pier shorter than the storey height as one storey height long
+            P2 = [n[:2] for n in ns]
+            L = max(float(np.linalg.norm(P2[a] - P2[b])) for a in range(len(P2)) for b in range(a + 1, len(P2)))
             h = abs(float(ns[2][2] - ns[0][2])) or STOREY_H
             t = float(wp.get("thickness_m", 0.15))
             v_wall += t * L * h

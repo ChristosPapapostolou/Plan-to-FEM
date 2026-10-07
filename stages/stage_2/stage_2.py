@@ -830,7 +830,81 @@ def auto_calibrate_floor(data: dict, *, target_thickness_m: float = 0.20,
     return data, k
 
 
-def consolidate_wall_rects(floor: dict, *,
+PRINCIPAL_TOL_DEG = 5.0
+
+
+def _floor_dominant_angle(floor) -> float:
+    """Length-weighted dominant wall direction (deg, in (-45, 45]) from the circular mean of 4*phi."""
+    sx = sy = 0.0
+    for w in floor.get("walls", []):
+        if w.get("rejected"):
+            continue
+        pts = {p["id"]: (p["x"], p["y"]) for p in w.get("points", [])}
+        for r in w.get("rects", []):
+            a, b = pts.get(r["p1_id"]), pts.get(r["p2_id"])
+            if a is None or b is None:
+                continue
+            L = math.hypot(b[0] - a[0], b[1] - a[1]); phi = math.atan2(b[1] - a[1], b[0] - a[0])
+            sx += L * math.cos(4 * phi); sy += L * math.sin(4 * phi)
+    return 0.0 if (sx == 0.0 and sy == 0.0) else math.degrees(math.atan2(sy, sx) / 4.0)
+
+
+def _transform_floor_points(floor, fn):
+    """Apply fn(x, y) -> (x, y) to every point and recompute the rect angles (convention atan2(|dx|, |dy|))."""
+    for w in floor.get("walls", []):
+        for p in w.get("points", []):
+            x, y = fn(p["x"], p["y"]); p["x"], p["y"] = round(float(x), 4), round(float(y), 4)
+        pts = {p["id"]: (p["x"], p["y"]) for p in w.get("points", [])}
+        for r in w.get("rects", []):
+            a, b = pts.get(r["p1_id"]), pts.get(r["p2_id"])
+            if a is not None and b is not None:
+                r["angle_rad"] = round(math.atan2(abs(b[0] - a[0]), abs(b[1] - a[1])), 4)
+
+
+def consolidate_wall_rects(floor: dict, **kw) -> dict:
+    """Consolidation along the plan's own axes: a plan whose dominant wall direction deviates from the
+    drawing axes by more than PRINCIPAL_TOL_DEG is rotated into that frame, consolidated and rotated back,
+    so that its walls are merged as H/V runs instead of being snapped onto the drawing axes."""
+    import copy as _copy
+    theta = _floor_dominant_angle(floor)
+    if abs(theta) <= PRINCIPAL_TOL_DEG:
+        return _consolidate_wall_rects_axes(floor, **kw)
+    pts = [(p["x"], p["y"]) for w in floor.get("walls", []) if not w.get("rejected") for p in w.get("points", [])]
+    cx = sum(p[0] for p in pts) / len(pts); cy = sum(p[1] for p in pts) / len(pts)
+    def rot(deg):
+        c, s = math.cos(math.radians(deg)), math.sin(math.radians(deg))
+        return lambda x, y: (cx + c * (x - cx) - s * (y - cy), cy + s * (x - cx) + c * (y - cy))
+    f2 = _copy.deepcopy(floor)
+    _transform_floor_points(f2, rot(-theta))
+    out = _consolidate_wall_rects_axes(f2, **kw)
+    _transform_floor_points(out, rot(theta))
+    return out
+
+
+def mask_principal_angle(mask) -> float:
+    """Dominant wall direction of a binary mask (deg, in (-45, 45], image axes) from the
+    magnitude-weighted circular mean of 4*phi over the edge gradient directions."""
+    m = (mask > 127).astype(np.float32)
+    gx = cv2.Sobel(m, cv2.CV_32F, 1, 0, ksize=3); gy = cv2.Sobel(m, cv2.CV_32F, 0, 1, ksize=3)
+    mag = np.hypot(gx, gy); sel = mag > 1e-3
+    if not sel.any():
+        return 0.0
+    phi = np.arctan2(gy[sel], gx[sel]); w = mag[sel]
+    return float(np.degrees(np.arctan2((w * np.sin(4 * phi)).sum(), (w * np.cos(4 * phi)).sum()) / 4.0))
+
+
+def rotate_mask(mask, angle_deg):
+    """Rotate a binary mask by angle_deg (cv2 convention) on an expanded canvas; returns (mask, M)."""
+    h, w = mask.shape[:2]
+    M = cv2.getRotationMatrix2D((w / 2.0, h / 2.0), angle_deg, 1.0)
+    c, s = abs(M[0, 0]), abs(M[0, 1])
+    nw, nh = int(math.ceil(h * s + w * c)) + 4, int(math.ceil(h * c + w * s)) + 4
+    M[0, 2] += nw / 2.0 - w / 2.0; M[1, 2] += nh / 2.0 - h / 2.0
+    r = cv2.warpAffine(mask, M, (nw, nh), flags=cv2.INTER_LINEAR, borderValue=0)
+    return np.where(r > 127, 255, 0).astype(np.uint8), M
+
+
+def _consolidate_wall_rects_axes(floor: dict, *,
                            lateral_tol_m: float = 0.10,
                            gap_tol_m: float = 0.25,
                            min_seg_len_m: float = 0.10,
@@ -1229,6 +1303,8 @@ def main():
     parser.add_argument("--output-vis", "-v", type=str,
                         default="floor_visualization.png")
     parser.add_argument("--floor-height", type=float, default=2.80)
+    parser.add_argument("--no-principal-frame", action="store_true",
+                        help="Vectorize in the drawing axes (behaviour before the orientation fix)")
     args = parser.parse_args()
 
     if args.input:
@@ -1244,9 +1320,38 @@ def main():
         floor_height=args.floor_height,
     )
 
-    floor = pipe.run(mask)
+    # Orientation: tracing, snapping and consolidation work along the image axes, so a drawing whose walls
+    # run more than PRINCIPAL_TOL_DEG off them is vectorized on the mask rotated into its principal frame and
+    # the output coordinates are mapped back to the drawing.
+    M = None
+    if not args.no_principal_frame and mask is not None:
+        theta = mask_principal_angle(mask)
+        if abs(theta) > PRINCIPAL_TOL_DEG:
+            best = None
+            for sgn in (1.0, -1.0):
+                rm, Mi = rotate_mask(mask, sgn * theta)
+                res = abs(mask_principal_angle(rm))
+                if best is None or res < best[0]:
+                    best = (res, rm, Mi, sgn * theta)
+            _res, mask_run, M, applied = best
+            logger.info("Principal frame: mask rotated by %.2f deg (residual %.2f deg)", applied, _res)
+    mask_run = mask if M is None else mask_run
+
+    floor = pipe.run(mask_run)
     pipe.export_json(floor, args.output_json)
-    pipe.visualize(mask, floor, args.output_vis)
+    pipe.visualize(mask_run, floor, args.output_vis)
+    if M is not None:
+        with open(args.output_json) as f:
+            data = json.load(f)
+        s = data["scale_m_per_px"]; Minv = cv2.invertAffineTransform(M)
+        def back(x, y):
+            px, py = x / s, y / s
+            return ((Minv[0, 0] * px + Minv[0, 1] * py + Minv[0, 2]) * s,
+                    (Minv[1, 0] * px + Minv[1, 1] * py + Minv[1, 2]) * s)
+        _transform_floor_points(data, back)
+        data["principal_frame"] = {"stage": 2, "mask_rotation_deg": round(float(applied), 4)}
+        with open(args.output_json, "w") as f:
+            json.dump(data, f, indent=2)
 
     valid = [w for w in floor.walls if not w.rejected]
     rejected_w = [w for w in floor.walls if w.rejected]

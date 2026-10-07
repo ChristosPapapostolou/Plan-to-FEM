@@ -1,0 +1,1751 @@
+{
+ "tables": {
+  "table13": [
+   [
+    "Plan",
+    "Floor area (m2)",
+    "Columns",
+    "Columns / 100 m2",
+    "Tributary area (m2)",
+    "Median spacing (m)"
+   ],
+   [
+    "floor_plan_1",
+    "216",
+    "85",
+    "39.3",
+    "2.5",
+    "0.82"
+   ],
+   [
+    "floor_plan_2",
+    "305",
+    "100",
+    "32.8",
+    "3.0",
+    "1.03"
+   ],
+   [
+    "floor_plan_3",
+    "310",
+    "105",
+    "33.9",
+    "2.9",
+    "1.00"
+   ],
+   [
+    "floor_plan_4",
+    "511",
+    "90",
+    "17.6",
+    "5.7",
+    "1.28"
+   ],
+   [
+    "floor_plan_5",
+    "404",
+    "103",
+    "25.5",
+    "3.9",
+    "1.03"
+   ],
+   [
+    "floor_plan_6",
+    "456",
+    "109",
+    "23.9",
+    "4.2",
+    "0.95"
+   ],
+   [
+    "floor_plan_7",
+    "648",
+    "135",
+    "20.8",
+    "4.8",
+    "0.87"
+   ],
+   [
+    "floor_plan_8",
+    "619",
+    "136",
+    "22.0",
+    "4.5",
+    "1.19"
+   ],
+   [
+    "floor_plan_9",
+    "208",
+    "86",
+    "41.4",
+    "2.4",
+    "0.96"
+   ],
+   [
+    "plan_05",
+    "335",
+    "113",
+    "33.7",
+    "3.0",
+    "0.94"
+   ]
+  ],
+  "table14": [
+   [
+    "Plan",
+    "SW panels",
+    "Beams",
+    "Columns",
+    "Ecc. (%)",
+    "Span (m)",
+    "W / F",
+    "Coherence score"
+   ],
+   [
+    "floor_plan_1",
+    "96",
+    "207",
+    "255",
+    "34.8",
+    "2.27",
+    "0 / 1",
+    "0.83"
+   ],
+   [
+    "floor_plan_2",
+    "102",
+    "276",
+    "300",
+    "6.9",
+    "2.29",
+    "0 / 0",
+    "1.00"
+   ],
+   [
+    "floor_plan_3",
+    "135",
+    "288",
+    "315",
+    "14.4",
+    "2.70",
+    "1 / 0",
+    "0.92"
+   ],
+   [
+    "floor_plan_4",
+    "123",
+    "255",
+    "270",
+    "4.5",
+    "3.71",
+    "0 / 0",
+    "1.00"
+   ],
+   [
+    "floor_plan_5",
+    "132",
+    "297",
+    "309",
+    "11.4",
+    "3.55",
+    "1 / 0",
+    "0.92"
+   ],
+   [
+    "floor_plan_6",
+    "144",
+    "339",
+    "327",
+    "22.9",
+    "3.35",
+    "0 / 1",
+    "0.83"
+   ],
+   [
+    "floor_plan_7",
+    "168",
+    "384",
+    "405",
+    "1.8",
+    "3.27",
+    "0 / 0",
+    "1.00"
+   ],
+   [
+    "floor_plan_8",
+    "144",
+    "444",
+    "408",
+    "34.6",
+    "3.35",
+    "0 / 1",
+    "0.83"
+   ],
+   [
+    "floor_plan_9",
+    "108",
+    "243",
+    "258",
+    "5.6",
+    "2.08",
+    "0 / 0",
+    "1.00"
+   ],
+   [
+    "plan_05",
+    "105",
+    "270",
+    "339",
+    "15.8",
+    "2.52",
+    "1 / 0",
+    "0.92"
+   ]
+  ],
+  "table15": [
+   [
+    "Plan",
+    "Floor area (m2)",
+    "Concrete (m3)",
+    "Concrete (m3/m2)",
+    "Vertical only (m3/m2)",
+    "Wall length (m/m2)"
+   ],
+   [
+    "floor_plan_1",
+    "216",
+    "407",
+    "0.627",
+    "0.354",
+    "0.330"
+   ],
+   [
+    "floor_plan_2",
+    "305",
+    "473",
+    "0.518",
+    "0.251",
+    "0.223"
+   ],
+   [
+    "floor_plan_3",
+    "310",
+    "524",
+    "0.564",
+    "0.301",
+    "0.294"
+   ],
+   [
+    "floor_plan_4",
+    "511",
+    "622",
+    "0.406",
+    "0.184",
+    "0.172"
+   ],
+   [
+    "floor_plan_5",
+    "404",
+    "620",
+    "0.511",
+    "0.264",
+    "0.258"
+   ],
+   [
+    "floor_plan_6",
+    "456",
+    "734",
+    "0.537",
+    "0.272",
+    "0.231"
+   ],
+   [
+    "floor_plan_7",
+    "648",
+    "870",
+    "0.448",
+    "0.205",
+    "0.205"
+   ],
+   [
+    "floor_plan_8",
+    "619",
+    "875",
+    "0.472",
+    "0.210",
+    "0.181"
+   ],
+   [
+    "floor_plan_9",
+    "208",
+    "399",
+    "0.641",
+    "0.338",
+    "0.309"
+   ],
+   [
+    "plan_05",
+    "335",
+    "514",
+    "0.512",
+    "0.249",
+    "0.225"
+   ]
+  ],
+  "S11": [
+   [
+    "Plan",
+    "Lines X/Y",
+    "Ecc. x / y (%)",
+    "Slab span (m)",
+    "Beam ends (d/v/u)",
+    "Cols",
+    "Score"
+   ],
+   [
+    "floor_plan_1",
+    "6 / 5",
+    "8.8 / 34.8",
+    "2.27",
+    "138 / 0 / 0",
+    "85",
+    "0.83"
+   ],
+   [
+    "floor_plan_2",
+    "4 / 5",
+    "6.9 / 2.0",
+    "2.29",
+    "182 / 2 / 0",
+    "100",
+    "1.00"
+   ],
+   [
+    "floor_plan_3",
+    "7 / 11",
+    "14.4 / 14.4",
+    "2.70",
+    "186 / 6 / 0",
+    "103",
+    "0.92"
+   ],
+   [
+    "floor_plan_4",
+    "7 / 9",
+    "3.3 / 4.5",
+    "3.71",
+    "166 / 4 / 0",
+    "88",
+    "1.00"
+   ],
+   [
+    "floor_plan_5",
+    "9 / 8",
+    "3.8 / 11.4",
+    "3.55",
+    "192 / 6 / 0",
+    "103",
+    "0.92"
+   ],
+   [
+    "floor_plan_6",
+    "7 / 8",
+    "22.9 / 9.5",
+    "3.35",
+    "224 / 2 / 0",
+    "109",
+    "0.83"
+   ],
+   [
+    "floor_plan_7",
+    "3 / 9",
+    "1.8 / 0.2",
+    "3.27",
+    "250 / 6 / 0",
+    "134",
+    "1.00"
+   ],
+   [
+    "floor_plan_8",
+    "6 / 3",
+    "12.2 / 34.6",
+    "3.35",
+    "292 / 4 / 0",
+    "135",
+    "0.83"
+   ],
+   [
+    "floor_plan_9",
+    "5 / 7",
+    "5.6 / 0.8",
+    "2.08",
+    "158 / 4 / 0",
+    "84",
+    "1.00"
+   ],
+   [
+    "plan_05",
+    "10 / 8",
+    "5.6 / 15.8",
+    "2.52",
+    "170 / 10 / 0",
+    "110",
+    "0.92"
+   ]
+  ],
+  "table7": [
+   [
+    "Aspect",
+    "Treatment in the exported model",
+    "Parameter / tolerance"
+   ],
+   [
+    "Shear-wall elements",
+    "Four-node thin-shell area objects, specified wall property",
+    "thickness measured in Stage 2, snapped to 25 mm, floor 25 mm"
+   ],
+   [
+    "Slab elements",
+    "One thin-shell slab per storey over the footprint hull; no slab openings",
+    "0.15 m uniform"
+   ],
+   [
+    "Beams",
+    "Two-node rectangular RC frame elements (perimeter ring, pier ties, interior grid beams)",
+    "500 mm deep x 300 mm wide"
+   ],
+   [
+    "Columns",
+    "Two-node square RC frame elements, continuous across storeys",
+    "tributary-sized; see sizing row"
+   ],
+   [
+    "Column sizing",
+    "N_Ed = A_trib w n_storeys; b = sqrt(N_Ed / (0.35 fc)); no slenderness, moment or reinforcement check",
+    "w = 12 kPa; b >= 0.25 m, rounded up to 50 mm; no upper bound"
+   ],
+   [
+    "Wall openings",
+    "Not modelled as openings within shells; opening edges are not extruded, leaving gaps between piers",
+    "-"
+   ],
+   [
+    "Meshing",
+    "No explicit mesh assignment; automatic meshing by the analysis package at solution time",
+    "one area object per pier and per slab, per storey"
+   ],
+   [
+    "Beam-wall and beam-column joints",
+    "Node-to-node framing at the storey top elevation; no rigid end zones or offsets",
+    "-"
+   ],
+   [
+    "Diaphragm",
+    "One rigid diaphragm per storey, assigned to the slab and to all joints at that level",
+    "rigid (not semi-rigid)"
+   ],
+   [
+    "Base restraints",
+    "All nodes at the base elevation fully fixed; no foundation elements",
+    "6 DOF; base tolerance 1 mm"
+   ],
+   [
+    "Material",
+    "Isotropic concrete",
+    "fc = 30 MPa, E = 25,743 MPa, nu = 0.20, alpha = 5.5x10-6 /C"
+   ],
+   [
+    "Mass source, loads, load cases",
+    "Not assigned by the exporter; defined by the engineer before analysis",
+    "-"
+   ],
+   [
+    "Node connectivity",
+    "Coincident nodes merged",
+    "5 mm"
+   ],
+   [
+    "Beam-end connectivity",
+    "Every beam end on a shared joint with a column, a wall panel or another beam; loose ends snapped onto the nearest support; walls and supporting beams divided at the snap point",
+    "snap radius 0.20 m"
+   ],
+   [
+    "Unsupported joints",
+    "Joints near a support merged onto it; gravity posts, continued to the base, under unsupported corner joints and under any sub-assembly without a path to the base",
+    "merge radius 0.20 m"
+   ],
+   [
+    "Span control",
+    "Grid spans subdivided by intermediate columns; long piers split; unsupported beam runs subdivided by gravity posts",
+    "max clear span 6.0 m; pier split above 3.0 m; max unsupported beam run 6.0 m"
+   ],
+   [
+    "Plan orientation",
+    "Stages 2-4 run and the model is built in the principal frame of the wall layout, then rotated back; piers off the frame axes keep their own direction; bent pier groups split into straight runs",
+    "frame used if |theta| > 5 deg; axis snap only within 5 deg and 0.30 m"
+   ]
+  ],
+  "table8": [
+   [
+    "Check",
+    "Criterion",
+    "Thresholds"
+   ],
+   [
+    "lateral_lines",
+    "distinct shear-wall lines resisting each direction",
+    "fail if < 2"
+   ],
+   [
+    "eccentricity",
+    "stiffness centre (k proportional to t\u00b7L\u00b3 per merged pier) against plan centre, per direction",
+    "warn > 10%, fail > 20% of plan dimension"
+   ],
+   [
+    "beam_support",
+    "every beam end within 0.20 m of a column, wall or beam and on a shared joint with it; every member with an element path to the base",
+    "fail if any end unsupported or not on a shared joint, or any member floating; warn if > 50% of ends are carried only by other beams"
+   ],
+   [
+    "slab_span",
+    "max clear distance from slab interior to a vertical support",
+    "warn > 4.5 m, fail > 6.0 m"
+   ],
+   [
+    "column_continuity",
+    "identical column plan positions across all storeys",
+    "warn if 1-2 locations discontinuous; fail if > 2"
+   ],
+   [
+    "orphan_nodes",
+    "nodes not referenced by any element",
+    "warn if > 0"
+   ]
+  ],
+  "table10": [
+   [
+    "Parameter",
+    "Value"
+   ],
+   [
+    "Number of storeys",
+    "3 (ten-plan batch); 4 (MSD sweep)"
+   ],
+   [
+    "Storey height",
+    "3.0 m"
+   ],
+   [
+    "Material",
+    "Reinforced concrete, fc = 30 MPa, E = 25,743 MPa"
+   ],
+   [
+    "Wall mode",
+    "Structural (shear walls as shell elements)"
+   ],
+   [
+    "Column mode",
+    "Grid (GNN predictions consumed when present)"
+   ],
+   [
+    "Column sizing",
+    "Tributary area, w = 12 kPa, b = sqrt(N_Ed / 0.35 fc), 250 mm minimum"
+   ],
+   [
+    "Slab / diaphragm",
+    "One slab and one rigid diaphragm per storey"
+   ],
+   [
+    "Connectivity",
+    "Joint-connectivity step on (Section 5.5)"
+   ]
+  ],
+  "table9": [
+   [
+    "Evaluation",
+    "Edge IoU",
+    "Edge base rate",
+    "Column P",
+    "Column R",
+    "Column F1"
+   ],
+   [
+    "Validation (seed 2), threshold swept",
+    "0.571",
+    "-",
+    "0.705",
+    "0.810",
+    "0.753"
+   ],
+   [
+    "Validation (seed 2), thresholds frozen",
+    "0.566",
+    "0.312",
+    "0.601",
+    "0.908",
+    "0.723"
+   ],
+   [
+    "Untouched test (seed 101), thresholds frozen",
+    "0.543",
+    "0.280",
+    "0.610",
+    "0.906",
+    "0.729"
+   ]
+  ],
+  "S15": [
+   [
+    "Plan",
+    "Floating beams without the step (%)",
+    "T1 (s)",
+    "T1 / EC8",
+    "Wall share of base shear X / Y",
+    "Wall share of gravity",
+    "Beam load share",
+    "Max. beam mid-span (mm)",
+    "Torsion ratio X / Y"
+   ],
+   [
+    "floor_plan_1",
+    "18.2",
+    "0.114",
+    "0.44",
+    "0.99 / 0.98",
+    "0.75",
+    "0.81",
+    "1.7",
+    "1.63 / 1.12"
+   ],
+   [
+    "floor_plan_2",
+    "12.5",
+    "0.123",
+    "0.47",
+    "0.99 / 0.97",
+    "0.65",
+    "0.90",
+    "2.6",
+    "1.31 / 1.05"
+   ],
+   [
+    "floor_plan_3",
+    "14.4",
+    "0.116",
+    "0.45",
+    "0.98 / 0.99",
+    "0.82",
+    "0.88",
+    "2.8",
+    "1.27 / 1.04"
+   ],
+   [
+    "floor_plan_4",
+    "15.6",
+    "0.109",
+    "0.42",
+    "0.99 / 0.99",
+    "0.76",
+    "0.94",
+    "3.5",
+    "1.01 / 1.20"
+   ],
+   [
+    "floor_plan_5",
+    "19.6",
+    "0.110",
+    "0.42",
+    "0.99 / 0.99",
+    "0.79",
+    "0.93",
+    "3.2",
+    "1.06 / 1.32"
+   ],
+   [
+    "floor_plan_6",
+    "17.7",
+    "0.102",
+    "0.39",
+    "0.98 / 0.99",
+    "0.70",
+    "0.92",
+    "5.5",
+    "1.01 / 1.19"
+   ],
+   [
+    "floor_plan_7",
+    "15.1",
+    "0.100",
+    "0.39",
+    "0.98 / 0.99",
+    "0.66",
+    "0.94",
+    "4.3",
+    "1.01 / 1.10"
+   ],
+   [
+    "floor_plan_8",
+    "18.6",
+    "0.131",
+    "0.50",
+    "0.97 / 0.99",
+    "0.64",
+    "0.96",
+    "3.9",
+    "1.25 / 2.13"
+   ],
+   [
+    "floor_plan_9",
+    "24.4",
+    "0.138",
+    "0.53",
+    "0.98 / 0.99",
+    "0.74",
+    "0.89",
+    "1.5",
+    "1.01 / 1.20"
+   ],
+   [
+    "plan_05",
+    "5.1",
+    "0.128",
+    "0.49",
+    "0.97 / 0.98",
+    "0.65",
+    "0.86",
+    "1.7",
+    "1.07 / 1.28"
+   ]
+  ],
+  "S16": [
+   [
+    "Plan",
+    "Beam ends snapped",
+    "Joints merged",
+    "Wall splits",
+    "Corner posts",
+    "Span posts",
+    "Posts under floating parts",
+    "Columns without the step",
+    "Columns with the step"
+   ],
+   [
+    "floor_plan_1",
+    "79",
+    "33",
+    "9",
+    "2",
+    "3",
+    "0",
+    "80",
+    "85"
+   ],
+   [
+    "floor_plan_2",
+    "88",
+    "48",
+    "15",
+    "7",
+    "4",
+    "0",
+    "89",
+    "100"
+   ],
+   [
+    "floor_plan_3",
+    "93",
+    "27",
+    "18",
+    "3",
+    "7",
+    "0",
+    "95",
+    "105"
+   ],
+   [
+    "floor_plan_4",
+    "77",
+    "15",
+    "9",
+    "2",
+    "10",
+    "0",
+    "78",
+    "90"
+   ],
+   [
+    "floor_plan_5",
+    "72",
+    "42",
+    "3",
+    "0",
+    "9",
+    "0",
+    "94",
+    "103"
+   ],
+   [
+    "floor_plan_6",
+    "94",
+    "51",
+    "15",
+    "0",
+    "18",
+    "0",
+    "91",
+    "109"
+   ],
+   [
+    "floor_plan_7",
+    "57",
+    "33",
+    "0",
+    "2",
+    "21",
+    "0",
+    "112",
+    "135"
+   ],
+   [
+    "floor_plan_8",
+    "126",
+    "84",
+    "15",
+    "1",
+    "20",
+    "0",
+    "115",
+    "136"
+   ],
+   [
+    "floor_plan_9",
+    "74",
+    "57",
+    "27",
+    "0",
+    "3",
+    "0",
+    "83",
+    "86"
+   ],
+   [
+    "plan_05",
+    "58",
+    "39",
+    "6",
+    "3",
+    "12",
+    "0",
+    "98",
+    "113"
+   ]
+  ],
+  "S2": [
+   [
+    "PSW threshold (m)",
+    "Graph edges",
+    "PSW edges",
+    "Opening edges",
+    "Shear walls selected",
+    "Selected length (m)",
+    "Coherence score"
+   ],
+   [
+    "0.030",
+    "124.4",
+    "91.5",
+    "29.8",
+    "21.8",
+    "91.8",
+    "0.925"
+   ],
+   [
+    "0.045",
+    "124.4",
+    "91.5",
+    "29.8",
+    "21.8",
+    "91.8",
+    "0.925"
+   ],
+   [
+    "0.060 (deployed)",
+    "124.4",
+    "91.5",
+    "29.8",
+    "21.8",
+    "91.8",
+    "0.925"
+   ],
+   [
+    "0.080",
+    "124.4",
+    "91.5",
+    "29.8",
+    "21.8",
+    "91.8",
+    "0.925"
+   ],
+   [
+    "0.100",
+    "122.2",
+    "89.7",
+    "29.4",
+    "21.8",
+    "91.8",
+    "0.925"
+   ],
+   [
+    "0.120",
+    "114.0",
+    "83.8",
+    "27.1",
+    "21.9",
+    "91.9",
+    "0.925"
+   ],
+   [
+    "0.150",
+    "90.4",
+    "66.5",
+    "21.0",
+    "21.5",
+    "91.0",
+    "0.925"
+   ]
+  ],
+  "S10": [
+   [
+    "Suppression radius (m)",
+    "Columns / 100 m2",
+    "Tributary area (m2)",
+    "Median spacing (m)",
+    "Coherence score"
+   ],
+   [
+    "0.60 (deployed)",
+    "29.1",
+    "3.7",
+    "1.01",
+    "0.925"
+   ],
+   [
+    "1.50",
+    "26.4",
+    "4.0",
+    "1.07",
+    "0.925"
+   ],
+   [
+    "2.00",
+    "25.2",
+    "4.2",
+    "1.10",
+    "0.925"
+   ],
+   [
+    "2.50",
+    "24.2",
+    "4.3",
+    "1.14",
+    "0.925"
+   ],
+   [
+    "3.00",
+    "23.4",
+    "4.4",
+    "1.15",
+    "0.925"
+   ],
+   [
+    "4.00",
+    "22.2",
+    "4.7",
+    "1.22",
+    "0.925"
+   ]
+  ],
+  "table17": [
+   [
+    "Configuration",
+    "Piers",
+    "Length (m)",
+    "Coherence",
+    "Failing checks per plan",
+    "Overlap with deployed"
+   ],
+   [
+    "Rules only, learned prior disabled",
+    "18.9",
+    "86.1",
+    "0.925",
+    "0.30",
+    "0.879"
+   ],
+   [
+    "Deployed: rules and network",
+    "21.8",
+    "91.8",
+    "0.925",
+    "0.30",
+    "1.000"
+   ],
+   [
+    "Network only, rule selection disabled",
+    "21.3",
+    "75.1",
+    "0.892",
+    "0.50",
+    "0.439"
+   ]
+  ],
+  "S4": [
+   [
+    "Target SW area ratio",
+    "Piers",
+    "Selected length (m)",
+    "SW area (m\u00b2)",
+    "Coherence",
+    "Worst ecc."
+   ],
+   [
+    "1.0%",
+    "13.6",
+    "65.6",
+    "13.89",
+    "0.925",
+    "15.6%"
+   ],
+   [
+    "1.5%",
+    "18.2",
+    "80.2",
+    "16.92",
+    "0.925",
+    "15.7%"
+   ],
+   [
+    "2.0%",
+    "21.8",
+    "91.8",
+    "19.19",
+    "0.925",
+    "15.3%"
+   ],
+   [
+    "2.5%",
+    "24.4",
+    "98.5",
+    "20.49",
+    "0.925",
+    "15.2%"
+   ],
+   [
+    "3.0%",
+    "26.7",
+    "104.0",
+    "21.65",
+    "0.925",
+    "15.2%"
+   ],
+   [
+    "4.0%",
+    "30.1",
+    "112.8",
+    "23.68",
+    "0.925",
+    "15.1%"
+   ]
+  ],
+  "S5": [
+   [
+    "Weighting scheme",
+    "Mean (ten plans)",
+    "Mean (MSD)",
+    "MSD >= 0.80",
+    "Rank correlation (MSD)"
+   ],
+   [
+    "equal (deployed)",
+    "0.925",
+    "0.894",
+    "98%",
+    "1.000"
+   ],
+   [
+    "lateral system emphasis",
+    "0.887",
+    "0.843",
+    "49%",
+    "0.999"
+   ],
+   [
+    "gravity system emphasis",
+    "0.944",
+    "0.921",
+    "99%",
+    "1.000"
+   ],
+   [
+    "topology down-weighted",
+    "0.900",
+    "0.860",
+    "49%",
+    "0.999"
+   ],
+   [
+    "four informative checks",
+    "0.887",
+    "0.843",
+    "49%",
+    "0.994"
+   ],
+   [
+    "equal, warn credit 0.25",
+    "0.912",
+    "0.885",
+    "97%",
+    "0.999"
+   ],
+   [
+    "equal, warn credit 0.75",
+    "0.938",
+    "0.904",
+    "98%",
+    "0.999"
+   ]
+  ],
+  "table16": [
+   [
+    "Check",
+    "Pass",
+    "Warn",
+    "Fail",
+    "Note"
+   ],
+   [
+    "lateral_lines",
+    "98.1%",
+    "0.0%",
+    "1.9%",
+    "sparse-wall slivers"
+   ],
+   [
+    "eccentricity",
+    "28.9%",
+    "20.8%",
+    "50.3%",
+    "median worst-dir. 20.2%"
+   ],
+   [
+    "beam_support",
+    "100.0%",
+    "0.0%",
+    "0.0%",
+    "shared joints, no floating member"
+   ],
+   [
+    "slab_span",
+    "99.8%",
+    "0.1%",
+    "0.0%",
+    ""
+   ],
+   [
+    "column_continuity",
+    "98.8%",
+    "1.2%",
+    "0.0%",
+    ""
+   ],
+   [
+    "orphan_nodes",
+    "100.0%",
+    "0.0%",
+    "0.0%",
+    ""
+   ]
+  ],
+  "S12": [
+   [
+    "Plan",
+    "Merged piers",
+    "Worst ecc., t\u00b7L\u00b3 proxy",
+    "Worst ecc., flexure + shear",
+    "Difference",
+    "Verdict (proxy / full)"
+   ],
+   [
+    "floor_plan_1",
+    "16",
+    "34.8%",
+    "15.3%",
+    "19.6 pp",
+    "fail / warn"
+   ],
+   [
+    "floor_plan_2",
+    "15",
+    "6.9%",
+    "5.2%",
+    "1.7 pp",
+    "pass / pass"
+   ],
+   [
+    "floor_plan_3",
+    "29",
+    "14.4%",
+    "15.3%",
+    "0.9 pp",
+    "warn / warn"
+   ],
+   [
+    "floor_plan_4",
+    "23",
+    "4.5%",
+    "3.7%",
+    "0.8 pp",
+    "pass / pass"
+   ],
+   [
+    "floor_plan_5",
+    "26",
+    "11.4%",
+    "5.7%",
+    "5.6 pp",
+    "warn / pass"
+   ],
+   [
+    "floor_plan_6",
+    "19",
+    "22.9%",
+    "10.4%",
+    "12.5 pp",
+    "fail / warn"
+   ],
+   [
+    "floor_plan_7",
+    "22",
+    "1.8%",
+    "2.8%",
+    "1.0 pp",
+    "pass / pass"
+   ],
+   [
+    "floor_plan_8",
+    "19",
+    "34.7%",
+    "22.7%",
+    "12.0 pp",
+    "fail / fail"
+   ],
+   [
+    "floor_plan_9",
+    "17",
+    "5.6%",
+    "8.1%",
+    "2.5 pp",
+    "pass / pass"
+   ],
+   [
+    "plan_05",
+    "21",
+    "15.8%",
+    "11.2%",
+    "4.7 pp",
+    "warn / warn"
+   ]
+  ],
+  "table18": [
+   [
+    "Quantity",
+    "Ten plans, without step",
+    "Ten plans, with step",
+    "MSD, without step (sample)",
+    "MSD, with step"
+   ],
+   [
+    "Models analysed / completed",
+    "10 / 10",
+    "10 / 10",
+    "150 / 149",
+    "4,572 / 4,572"
+   ],
+   [
+    "Models with members without a path to the base",
+    "10",
+    "0",
+    "126",
+    "0"
+   ],
+   [
+    "Floating beams, median share (max)",
+    "16.6% (24.4%)",
+    "0",
+    "6.5% (30.3%)",
+    "0"
+   ],
+   [
+    "Max. gravity deflection, median",
+    "428 mm",
+    "1.0 mm",
+    "51 mm",
+    "0.8 mm"
+   ],
+   [
+    "Max. beam mid-span deflection (all models)",
+    "-",
+    "5.5 mm",
+    "-",
+    "7.4 mm"
+   ],
+   [
+    "Beam mid-span deflection, 99th percentile",
+    "-",
+    "-",
+    "-",
+    "5.2 mm"
+   ],
+   [
+    "T1, median",
+    "-",
+    "0.11 s",
+    "-",
+    "0.15 s"
+   ],
+   [
+    "Coherence, joint-aware check (mean)",
+    "0.750",
+    "0.925",
+    "0.737 (corpus)",
+    "0.894"
+   ]
+  ]
+ },
+ "text": {
+  "S11_caption": "Table S11. Detailed coherence-check breakdown per plan, for the models exported with the joint-connectivity step. Lines = distinct shear-wall lateral-resisting lines (X / Y); Ecc. = stiffness eccentricity per direction (% of plan dimension; values over 20% fail, values over 10% warn); beam ends are counted at storey level as direct support / supported via another beam / unsupported; Cols = column locations per floor. Every beam end lies on a shared joint and every member reaches the base; orphan-node and column-continuity checks pass for every plan.",
+  "table9_text": "Table 9 evaluates the deployed checkpoint on it at its stored thresholds. On the untouched set the edge IoU is 0.543 and the column F1 0.729, against 0.571 and 0.753 when the thresholds are swept on the validation graphs, so choosing thresholds on the reported split inflates IoU by about 0.03 and F1 by about 0.02. At frozen thresholds the two sets agree closely (0.543 against 0.566, 0.729 against 0.723).",
+  "S15_caption": "Table S15. Independent OpenSeesPy check of the ten batch models (three storeys). The first column is the share of beams with no element path to the base in the models of the exporter without the joint-connectivity step; all other columns are for the connected models, none of which has a floating member. T1 is the fundamental period of the diaphragm-condensed model and EC8 the estimate Ct\u00b7H^0.75 with Ct = 0.05 for wall structures; base-shear and gravity shares are the fractions of the base reactions carried by wall base joints; beam load share is the fraction of the slab load carried by beams rather than directly by vertical supports; the mid-span deflection adds 5wL\u2074/384EI to the mean end displacement; the torsion ratio is the largest roof displacement over the centroid displacement under the equivalent lateral load.",
+  "S16_caption": "Table S16. Operations of the joint-connectivity step on the ten batch models, counted over all three storeys, and storey-1 column counts with and without it. Posts are counted as column stacks, each continued from its joint to the base.",
+  "S2_caption": "Table S2. Sensitivity of the pipeline to the PSW thickness threshold, averaged over the 10 evaluation plans. Every column is a mean per plan; the coherence score is the aggregate of the six checks, computed with the joint-connectivity exporter and the joint-aware beam-support check, as in main-text Table 14.",
+  "S10_caption": "Table S10. Effect of the column suppression radius on member density, averaged over the ten evaluation plans. The radius governs only the network-predicted columns, about half of those exported, which is why the density responds so weakly to it. Computed with the joint-connectivity exporter and the joint-aware beam-support check.",
+  "S4_caption": "Table S4. Sensitivity of the layout to the shear-wall area budget, averaged over the ten evaluation plans, with the joint-connectivity exporter and the joint-aware check. Wall quantity scales with the budget; worst eccentricity is the mean over plans of the worst-direction value.",
+  "S5_caption": "Table S5. Coherence score under alternative weightings of the six checks and alternative credit for a warning, recomputed from the stored per-check outcomes of the ten evaluation plans and the MSD corpus (joint-connectivity exporter, joint-aware beam-support check). Rank correlation is Spearman's rho against the deployed equal weighting.",
+  "abstract": "Converting a raster floor plan into a structural analysis model is manual, which prevents portfolio-scale assessment of existing buildings. This study presents Plan-to-FEM, a pipeline that converts a single raster floor-plan image into a three-dimensional finite element model through transformer-based wall segmentation, skeleton-based vectorization with metric-scale estimation, structural-graph construction, and a multi-task graph neural network that proposes shear walls and columns under engineering-rule validation. A joint-connectivity step gives every member a load path, and a six-check coherence module audits each model. Vectorization recovers wall centerlines with precision 0.92 and recall 0.77; on a leakage-free split the network ranks shear walls with ROC AUC 0.70 and places columns with layout F1 0.59. Ten plans and all 4,572 Modified Swiss Dwellings plans complete end-to-end, and every exported model completes gravity, modal and lateral analyses in an independent solver. The models remain over-provided with columns and require engineer verification.",
+  "highlight_solver": "All 4,582 exported models solve in OpenSees, with a load path for every member.",
+  "contrib_solver": "Every exported model is also analysed in an independent solver, which shows that a distance-based support test is not sufficient: without an explicit joint-connectivity step, models that pass it contain members with no load path; with the step, every member has one.",
+  "connectivity_para": "Connectivity is enforced through shared joints, because an FE package connects elements only where they share a node. Coincident nodes are merged within 5 mm, and a joint-connectivity step runs after member generation. First, every beam end that is not on a column or wall joint is moved onto the nearest column, wall edge or other beam within 0.20 m, and the wall pier stack or the supporting beam is divided at that point so that the mesh stays conforming; an end with nothing within 0.20 m receives a gravity post. Second, beam-to-beam joints within 0.20 m of a column or wall joint are merged onto it, which matters chiefly for the corners of the slab-outline ring beam, and an unsupported joint at which the framing changes direction receives a post. Third, a straight run of beams through unsupported joints that is longer than the 6.0 m span limit receives intermediate posts at equal spacing. Finally, any sub-assembly still without an element path to the base receives posts at its free ends and corners. Posts are continued storey by storey to the base, and joints referenced by no element are removed. Grid spans are subdivided by intermediate columns so that no clear distance between vertical supports exceeds 6.0 m, and piers longer than 3.0 m are split (within a 20% tolerance) rather than exported as monolithic panels. Members frame node-to-node at the storey top elevation: no rigid end zones, insertion-point offsets or end-length offsets are assigned, so member centerlines meet at a shared joint and panel-zone flexibility is not represented. Section 10.8 shows why the step is needed, by solving models exported with and without it: a distance tolerance alone leaves members without a load path. Table 7 collects the complete idealization together with its governing parameters and tolerances.",
+  "weighting_para": "Supplementary Table S5 recomputes the score of every model under alternative weightings from the stored per-check outcomes. The ranking of models is robust: the Spearman correlation between the deployed equal weighting and every alternative is at least 0.994 over the MSD corpus. The absolute value is not: the MSD mean ranges from 0.843 to 0.921, and the share of plans at or above 0.80 from 49% to 99%, depending only on the weighting, so the score should not be read as an acceptance level. Column continuity and orphan nodes pass on 98.8% or more of the models and add an almost constant offset; removing them lowers the MSD mean from 0.894 to 0.843 and the share at or above 0.80 from 98% to 49% while leaving the ranking unchanged (rho = 0.99). This four-check score is therefore reported alongside the six-check score and is recommended for comparing layouts.",
+  "density_para": "Table 13 reports, per plan, the storey floor area from the exported slab, the column count, its density, the implied tributary area and the median column-to-column distance. Density ranges from 17.6 to 41.4 columns per 100 m2, median 29.1, so each column carries only 2.4 to 5.7 m2, median 3.5, with neighbors 0.82 to 1.28 m apart. These are an order of magnitude from practice, and the pipeline contradicts itself internally: its own export rule subdivides spans so no clear distance exceeds 6.0 m, which on a regular grid implies about 36 m2 per column against the 3.5 produced. The layouts are not economical grids but dense picket lines along wall centerlines. The joint-connectivity step contributes 127 of these columns (14% more than without it), as gravity posts under joints that would otherwise have no vertical support.",
+  "sections_para": "The section distribution compounds it: of 1,062 storey-level columns, 725 are 400 mm square and 327 are 250 mm square (with 6 at 300 mm and 4 at 350 mm), so the tributary sizing rule assigns large sections to columns standing about a meter apart, which no engineer would detail; the posts of the connectivity step take the default 400 mm section. The mechanism is identifiable: axes are clustered from every wall centerline, so partition-rich plans yield many closely spaced axes; a column is placed at every unsupported intersection, at pier ends and wherever a span check demands one; and the de-duplication radius is only 0.60 m. The consequence must be stated plainly, because it bears on how the score reads: a floor supported this densely satisfies the slab-span and beam-support checks almost automatically, so a high score partly reflects over-provision rather than judgement. Together with the weighting analysis of Supplementary Table S5, this is why the score is used here for triage and ranking, not as an acceptance metric.",
+  "nms_para": "The density is not governed by the suppression radius. Increasing the radius from 0.60 m to 4.00 m reduces density only from 29.1 to 22.2 columns per 100 m2, and coherence moves from 0.925 to 0.925 as spans lengthen (Supplementary Table S10), because suppression acts only on the 522 network-predicted columns (49%); the remaining 540 are generated by the export rules as demoted short piers, boundary columns at pier ends, span subdivision and connectivity posts.",
+  "batch_para": "The complete pipeline was run on the ten evaluation plans; all completed end to end with no stage failures. These results establish robustness and internal rule-consistency only, not structural correctness or efficiency, and the quantities below show why that distinction matters. Table 14 reports per-plan composition and outcome, Supplementary Table S11 the six-check breakdown, Fig. 8 the batch. Model size tracks plan size and density: three-storey totals span 96 to 168 shear-wall panels, 207 to 444 beams and 255 to 408 columns, 84 to 135 column locations per floor, all continuous. Mean coherence is 0.925 (0.887 for the four informative checks); 7 of ten plans complete without a failing check and 4 pass all six outright. The dominant residual defect is stiffness eccentricity, failing in one direction on plans whose usable piers are exhausted on one side. No plan shows orphan nodes, discontinuous columns, unsupported or unconnected beam ends, or members without a path to the base; all satisfy the two-lateral-line requirement, and no slab span exceeds the 6.0 m limit. Scored with the same joint-aware check, the models exported without the connectivity step average 0.750 and fail beam support on every plan (Section 10.8).",
+  "quantities_para": "Table 15 supplies material quantities, so that an over-provisioned model cannot be rewarded by checks that test only topology. Concrete volumes computed from exported geometry and assigned sections, normalized by three-storey floor area, run from 0.406 to 0.641 m3 per m2, median 0.515. The slab is a fixed 0.15 m and 30% of the volume, so it cannot be the source of excess; walls account for 29%, beams 21% and columns 20%. Against figures commonly quoted for low-rise reinforced-concrete residential construction, nearer 0.35 to 0.45 m3 per m2, the models are heavier, and the columns alone, at about a fifth of the volume, are where the density analysis says the excess lies.",
+  "msd_para1": "To test whether the geometric and structural stages generalize beyond ten curated plans, the pipeline was swept over the training split of the Modified Swiss Dwellings benchmark (Section 6.5). All 4,572 available plans were attempted and 4,572 of them (100.00%) completed every stage through coherence checking: vectorization with prior-based scale estimation, consolidation, multi-task GNN enrichment, four-storey FE export with the joint-connectivity step, and the six checks. This includes plan 1453, whose sparse mask (2.6% wall pixels) is drawn at about 26 degrees to the sheet axes: traced in the drawing axes it yields no valid wall segment and an empty graph, traced in its principal frame (Section 5.5) 37 wall rectangles. No per-plan tuning of any kind was applied: the same thresholds, budgets and trained checkpoint used for the ten-plan batch ran unchanged over real Swiss multi-apartment stock.",
+  "msd_para2": "Fig. 11 shows the coherence-score distribution. The mean is 0.894 (0.843 for the four informative checks) and the median 0.833 (quartiles 0.833/1.000); 97.7% of plans score at least 0.80, 48.8% at least 0.90, and 28.2% achieve a perfect 1.00, while the minimum is 0.500. Table 16 breaks the outcome down by check. The topology-level checks pass almost universally at scale: column continuity on 98.8% and orphan nodes on 100.0% of plans, lateral-line count on 98.1% and slab span on 99.8%. Beam support, which requires every beam end to sit on a shared joint and every member to reach the base, passes on 100.0%; no member of any connected model is floating. The residual defect class is stiffness eccentricity, failing on 50.3% of plans and warning on a further 20.8% (median worst-direction eccentricity 20.2%, 90th percentile 40.8%): multi-apartment complexes with elongated, articulated footprints genuinely concentrate their wall stock asymmetrically, and the balancing pass can only redistribute what exists. Scored with the same joint-aware check, the models exported without the connectivity step average 0.737, and 82.9% of them contain members without a path to the base.",
+  "ecc_proxy_para": "The eccentricity check uses the flexural proxy k \u221d t\u00b7L\u00b3 over merged piers, which ignores shear deformation. Recomputing the stiffness centre with the full cantilever stiffness k = [H\u00b3/(3EI) + \u03baH/(GA)]\u207b\u00b9 (A = t\u00b7L, \u03ba = 1.2, \u03bd = 0.2) over the same piers changes worst-direction eccentricity by a median of 3.6 percentage points (maximum 19.6) on the ten plans and changes 3 of the ten verdicts, each towards leniency (Supplementary Table S12): merged piers are often longer than the storey is high, so shear flexibility matters and the proxy overweights long walls. Over the MSD corpus the verdict would change on 40.0% of plans, almost always towards leniency, and the failure rate would fall from 50.3% to 24.6%. The full stiffness also tracks the torsional response computed by the solver (Section 10.8) slightly better: the Spearman correlation between worst-direction eccentricity and the solver torsion ratio is 0.69, against 0.66 for the proxy (n = 4,569). The proxy is kept in this paper so that all reported scores share one definition, and its eccentricity verdicts should be read as conservative; adopting the full stiffness is a recommended refinement of the check.",
+  "tolerance_para": "A check can also fail for reasons of measurement rather than structure. Without the connectivity step, export closes with a repair that inserts a gravity post beneath any beam end with no column, wall edge or other beam within tolerance, and the distance-only beam-support test audits the same condition. If the repair uses 0.25 m while the audit uses 0.20 m, ends falling between the two are left unrepaired and reported as failures: across the 4,572 plans, 2,944 such ends (in 1,886 plans) lie in the 0.20-0.25 m band (median 0.223 m, maximum 0.250 m; Supplementary Table S13), and matching the two tolerances at 0.20 m, as deployed, raises the MSD mean under that test from 0.840 to 0.909. Matching tolerances ensure that every beam end has a support nearby; they do not ensure that the end is connected to it, which only the solver check of Section 10.8 reveals.",
+  "ecc_dist_para": "Stiffness eccentricity behaves differently. Worst-direction eccentricity is at most 10% of the plan dimension on 29.0% of plans, between 10 and 20% on 20.7%, between 20 and 30% on 19.9% and above 30% on 30.4% (99th percentile 48.6%), so these failures reflect a genuine and often large asymmetry of the wall stock rather than marginal exceedances of a threshold.",
+  "fig12_para": "Fig. 12 illustrates the score spectrum with three plans. The top row (MSD 3098, score 1.00) is an axis-aligned multi-apartment floor whose model carries distributed shear walls, interior beams and a continuous column grid and passes every check. The middle row (MSD 2123, score 0.833, the lower quartile) is drawn at 29 degrees to the sheet axes; it is enriched and exported in its principal frame, so its walls keep their direction, and it is structurally complete but warns on eccentricity, column continuity. The bottom row (MSD 4614, score 0.500, the lowest in the corpus) shows the failure mode that dominates the low tail: a building drawn with thin, fragmented wall strokes, from which vectorization recovers little continuous wall, so that few shear walls survive and the slab hull spans large areas without them; it fails lateral lines, eccentricity, slab span. The tail is of this kind generally: plans failing the lateral-line check retain a median of 47 m of vectorized wall against 127 m for plans that pass. That the pipeline degrades to a low score rather than crashing on these inputs, and reports the specific deficient checks, is the intended behavior of the coherence layer.",
+  "solver_paras": [
+   "The coherence checks test the exported topology; they do not show that an FE package can analyse the model. Every exported model was therefore mapped into OpenSeesPy [50,51] and analysed. The mapping reads model_fem.json as an analysis package would, connecting elements only where they share a joint. Shear-wall piers become ShellMITC4 elements with an elastic membrane-plate section, meshed at about 0.75 m; columns and beams become elastic beam-column elements with gross rectangular sections, beams bending about their strong axis; each storey carries a rigid diaphragm with its mass lumped at the master node; and base joints are fixed. Gravity load is the self-weight of walls and frames (25 kN/m3) plus, over the slab outline, the 0.15 m slab, 1.5 kPa superimposed dead load and 2.0 kPa live load, each 0.25 m slab sample being carried by the nearest beam, as a uniform line load, or the nearest vertical support; the seismic mass is G + 0.3Q. Three analyses are run: linear static gravity, with the sum of reactions checked against the applied load; modal analysis condensed to the diaphragm degrees of freedom; and an equivalent lateral force of 10% of the seismic weight in each direction, distributed in proportion to storey mass times height. No design or code check is performed, and the idealization is not that of the target package: the slab enters through its diaphragm and its load, not as shell elements.",
+   "Applied to models exported without the joint-connectivity step, the check exposes a defect that a distance-based support test passes. Every one of the ten batch models and 126 of the 150 models of a score-stratified MSD sample (exported also without the orientation handling) contain members with no element path to the base, a median 16.6% of the beams on the ten plans (maximum 24.4%) and 6.5% in the sample (maximum 30.3%); over the full corpus, 82.9% of the models exported without the step contain such members. A distance-only beam-support test passes them, because it asks whether each beam end has a support within 0.20 m, not whether it is connected to it. Three mechanisms are responsible: grid-beam ends placed at wall sample points that are not wall-panel joints; corners of the slab-outline ring beam lying a few millimetres from wall corners; and long runs of beams framing into one another with no vertical support. With the floating parts removed so that the rest can be solved, the largest gravity deflection reaches a median of 428 mm on the ten plans and 51 mm in the sample, the signature of near-mechanisms.",
+   "The joint-connectivity step of Section 5.5 removes this defect, and the beam-support check of Section 5.6 tests the same condition. Table 18 compares the exporter without and with the step. With the step, all 4,582 models (ten batch and 4,572 MSD) complete the gravity, modal and lateral analyses with no floating member; the largest equilibrium error is below 10\u207b\u2079, the largest joint deflection under gravity is 4.3 mm and the largest beam mid-span deflection 7.4 mm (99th percentile over the MSD models 5.2 mm). The step adds 127 gravity posts on the ten plans (14% more columns) and a median 8% more columns per MSD plan (Supplementary Tables S15 and S16). It leaves the lateral-line verdict unchanged on every plan and the eccentricity verdict on 99.3% of MSD plans; the exceptions lie at a band boundary and move because merging slab-outline corners onto supports shifts the plan centre slightly. Slab-span verdicts improve where posts shorten spans.",
+   "The connected models are stiff and wall-dominated. The fundamental period has a median of 0.11 s on the three-storey batch and 0.15 s on the four-storey MSD models, against the EN 1998-1 [52] estimate Ct\u00b7H^0.75 of 0.26 and 0.32 s for wall structures; the walls carry a median 99% of the base shear and 77% of the gravity reaction, and beams carry 83% of the slab load. These magnitudes follow from gross uncracked sections, fixed bases and the dense column layout, and are plausibility checks rather than design values.",
+   "The solver also provides an external reference for two of the heuristic checks (Fig. 13). Models failing the lateral-line check have a longest translational period 1.13 times the EN 1998-1 estimate, against 0.47 for models that pass, so that check flags directions that are genuinely flexible. The eccentricity grade correlates with the solver torsion ratio, the largest roof displacement over the centroid displacement under the lateral load (Spearman rho = 0.59); of the models failing the check, 78.1% have a torsion ratio above 1.2, against 22.4% of those that pass. These comparisons validate the direction of the two checks, not their thresholds.",
+   "The check verifies that the exported models are analysable and respond plausibly; it is not a structural assessment. It is linear elastic, uses gross sections and nominal loads, applies no load combination or code check, and runs in OpenSees rather than in the package the models are exported to."
+  ],
+  "solver_table_after": 2,
+  "solver_fig_after": 4,
+  "table18_caption": "Table 18. Independent OpenSeesPy check of the exported models, without and with the joint-connectivity step. MSD values without the step are for a 150-plan sample stratified by score, exported also without the orientation handling; with the step, for every completed plan. Deflections are maxima under gravity; the mid-span value adds 5wL\u2074/384EI to the mean end displacement of each beam. One sample model without the step has no wall or column and cannot be solved.",
+  "fig13_caption": "Fig. 13. Independent solver check. (a) Share of beams without an element path to the base and (b) largest gravity deflection, for the exporter without and with the joint-connectivity step, on the ten batch plans and the MSD models; (c) longest translational period over the EN 1998-1 estimate, by lateral-line verdict; (d) solver torsion ratio by eccentricity verdict, for the connected MSD models.",
+  "perf_insert": "These timings exclude the joint-connectivity step, which raises FE model assembly from a median 0.66 s to 1.81 s per plan when both are measured on a second, 16-core machine (ten plans, three runs each), a cost of about 1.2 s.",
+  "perf_msd": "The MSD sweep, which bypasses Stage 1, was run on the second, 16-core machine of Supplementary Table S8 with eight worker processes; with Stages 2 to 5, the export with and without the connectivity step, the checks and the solver check, a plan took a median of 10.9 s, of which the OpenSees check took a median of 5.0 s.",
+  "arms_para1": "Table 17 compares three shear-wall selector configurations on identical geometry: the learned prior disabled, the deployed hybrid, and rule-based selection disabled. The rules alone select 18.9 piers per plan totaling 86.1 m, at a mean coherence of 0.925; the deployed system selects 21.8 piers totaling 91.8 m at 0.925. Across the batch, 29 of the 218 selected piers, 13%, are admitted only because the network scored above the prior, and 0 piers selected by the rules alone are absent from the deployed layout. The learned prediction therefore widens the candidate set that the rules then govern. The two layouts share 0.88 of their piers by Jaccard overlap, and admitting more piers through a permissive prior (24.4 piers, 97.8 m) gives a coherence of 0.925.",
+  "arms_para2": "Disabling rule-based selection entirely, so that a pier is chosen when the network scores it above the prior and for no other reason, gives a layout that is neither the deployed one nor the rules-only one: it shares only 0.44 of its piers with the deployed layout by Jaccard overlap, adds 83 piers the deployed system does not select, and omits 88 that it does. On the ten evaluation plans the network alone scores 0.892 against 0.925 for the deployed hybrid and 0.925 for the rules alone, with 0.50 failing checks per plan against 0.30 and 0.30, using 75.1 m of wall against 91.8 m.",
+  "arms_para3": "Ten plans are too few to settle this, and over the whole MSD corpus the network-only configuration reaches a mean coherence of 0.858 against 0.894 for the deployed hybrid (88.3% against 97.7% of plans at or above 0.80), the difference being concentrated in the checks the rules exist to control: stiffness eccentricity fails on 58.5% of plans without the balancing pass against 50.3% with it, and the lateral-line check on 14.9% against 1.9%.",
+  "arms_para4": "This comparison does not justify removing the rules, nor does it establish that they produce better structures. The coherence score is defined in this paper, is sensitive to its weighting, does not price material and rewards over-provision (Section 10.3); the rules also encode redundancy requirements that the score does not test; and no engineer ground truth is available. What the comparison does establish is that at scale the rule layer earns its place on the specific grounds it was designed for, stiffness eccentricity and lateral redundancy. The deployed hybrid is recommended on those grounds and on code alignment rather than on the score.",
+  "colsplit_para": "For columns the balance is different and the learned share is larger. Of the 1,062 storey-level columns exported across the batch, 522 (49%) coincide with network node predictions and 540 (51%) are generated by the export rules as demoted short piers, boundary columns at pier ends, span subdivision and the 127 connectivity posts. Taken together, the two measurements show that this is a hybrid system in which the network supplies roughly half of the column positions and 13% of the shear-wall selection, while engineering rules determine the remainder and retain the final say over everything the network proposes. Member placement is therefore learned only in this qualified sense. The improvement from the synthetic design loop is established only on synthetic validation and test graphs; no independent real labelled test set exists on which to show that the network exceeds its rule teacher.",
+  "limitations_para": "Several limitations temper these findings. On the corrected leak-free split the shear-wall edge head exceeds the all-positive base rate only slightly, 0.637 against 0.620, so wall selection remains rule-led with the network as a prior; promoting it to decision-maker awaits richer labels. The column head over-proposes, and the rule validator plus suppression carry the thinning. The training stock, Chinese high-rise shear-wall residences plus parametric synthetics, does not span the world's typologies; the exporter builds identical storeys, so setbacks, transfer levels and varying storey heights are out of scope; the idealization omits foundations; rotated plans are built in their principal frame and off-frame walls keep their direction, but the grid, beam and column rules work along one pair of axes, so plans that mix several wall directions receive a grid aligned with the dominant one only; and the 0.20 m thickness prior will mis-estimate scale on stock whose walls deviate systematically. At scale the topology checks pass, while stiffness eccentricity, median worst-direction 20.2%, and inputs with sparse, fragmented wall strokes define the frontier. Member density is the largest defect: because column candidates are nodes of a wall-centerline graph, about a meter apart in partition-rich plans, the models carry roughly ten times more columns than ordinary framing implies, no suppression radius corrects it, and the connectivity step adds further gravity posts that guarantee a load path but are not designed members; replacing the candidate set with a coarse three-to-four-meter grid over which the network ranks positions is the most consequential structural improvement available.",
+  "threat_solver": "Finally, the solver check establishes analysability and plausibility under one idealization, in OpenSees, with gross sections and nominal loads; the models were not imported into the target package, and no load combination, cracked-section stiffness or code check was applied.",
+  "conclusions_para": "We presented Plan-to-FEM, an automated pipeline that converts a single raster architectural floor plan, under a fixed set of prescribed analysis assumptions, into a three-dimensional finite element model. Its central methodological element is the multi-task formulation of structural enrichment, with shear-wall ratios on edges and column placement as node-level classification over virtual grid candidates, trained on graphs built by the same vectorization path used at inference. On a de-duplicated and leakage-free validation split the network places columns with a layout F1 of 0.587 at 0.5 m tolerance and ranks shear walls with an edge ROC AUC of 0.696, although its edge IoU of 0.637 exceeds the 0.620 all-positive base rate only narrowly, so the final layouts are decided by rule-based validation with the network supplying candidates and a prior. On ten heterogeneous plans the pipeline succeeds end-to-end in every case, with a mean coherence score of 0.925 (0.887 on the four informative checks); over 4,572 Modified Swiss Dwellings plans, processed without retraining or per-dataset tuning, 4,572 complete with a mean score of 0.894, residual defects being concentrated in stiffness eccentricity. Every exported model was analysed in an independent solver. That check exposed members without a load path in models the coherence module had passed, led to the joint-connectivity step and a stricter beam-support check, and with them every model completes gravity, modal and lateral analyses with small deflections. Four qualifications bound these results. The pipeline automates model generation; it does not perform structural design, and the solver check is a plausibility check, not a code-compliant analysis. No engineer-drawn ground truth exists for any evaluation plan, so the coherence evidence is internal rather than comparative. The MSD sweep bypasses Stage 1, so the large-scale evidence tests the geometric and structural stages rather than the segmentation front end. And the generated layouts carry about ten times more columns than ordinary framing, a consequence of using wall-centerline junctions as column candidates.",
+  "future_para": "Future work follows from these limitations: importing the models into the target package and running code-based design checks on a representative subset; replacing the junction-based column candidates with a coarse three-to-four-meter structural grid over which the network ranks positions; fine-tuning the column head on real annotations from frame-structure drawings; richer shear-wall labels that would let the network act as decision-maker with the rules as veto; multi-floor stacking with floor-specific diaphragms; grid and beam rules for plans with several wall directions and curved footprints; robustness studies on scanned and skewed inputs; and, above all, a public benchmark of paired architectural and engineer-drawn structural plans.",
+  "S12_caption": "Table S12. The t\u00b7L\u00b3 eccentricity proxy against a flexure-plus-shear cantilever stiffness on the ten connected models, both computed over the merged piers the eccentricity check uses. Eccentricity is the distance between the stiffness centre and the plan centre, as a fraction of the plan dimension, in the worse direction; verdicts use the check's 10% and 20% bands.",
+  "S14_note": "The timings exclude the joint-connectivity step, whose cost is reported in main-text Section 10.9.",
+  "S1_paras": [
+   "This section follows one plan, plan_05, through every stage; the main text shows its source drawing and wall mask (Fig. 5), the vectorized geometry and graph (Fig. 2), the Stage 4 enrichment (Figs. 4 and 7a) and the exported model (Fig. 7b). The drawing is a residential floor of several apartments served by two stair-and-lift cores, digitized at 26.3 mm per pixel, the scale that Stage 2 estimates from the drawing's own wall-thickness statistics.",
+   "Stage 1 segments the wall pixels. Stage 2 skeletonizes the mask, traces and snaps the skeleton into straight segments and consolidates them into 105 walls made of 138 rectangles with measured thickness. Stage 3 turns this geometry into the GNN input graph of 250 nodes and 202 edges: 138 potential shear-wall edges, 39 indoor door or window openings and 4 outdoor doors, plus 7 virtual grid-candidate nodes attached by 21 message-passing links.",
+   "Stage 4 scores the 138 potential shear walls with the edge head and the candidate nodes with the column head. The engineering rules (minimum pier length, area budget, stiffness-eccentricity balance) retain 25 shear-wall rectangles, which form the piers of Fig. 4; the column head proposes 50 column positions above the deployed threshold of 0.40.",
+   "Stage 5 extrudes three storeys of 3.0 m. Before the joint-connectivity step each storey carries 98 columns: the network positions, short piers demoted to columns, boundary columns at pier ends and span-subdivision columns. The connectivity step then moves 51 beam ends onto columns, 1 onto a wall edge and 6 onto other beams, dividing 3 wall stacks and 6 beams at the new joints; merges 36 beam-to-beam joints onto columns and 3 onto walls; adds 3 posts under unsupported corner joints and 12 posts on 27 unsupported beam runs longer than 6.0 m; and removes 93 joints that no element references. The exported model has 105 shear-wall panels, 270 beams and 339 columns, 113 per storey at 110 plan locations, over 335 m2 per storey; its concrete volume is 514 m3, 0.512 m3 per m2 of floor.",
+   "The coherence module scores the model 0.917. There are 10 distinct shear-wall lines resisting X and 8 resisting Y; the stiffness eccentricity is 5.6% of the plan dimension in x and 15.8% in y, the second above the 10% warning band and the only non-passing check; every beam end sits on a shared joint and every member reaches the base; no point of the slab is more than 2.52 m from a vertical support; all 110 column locations are continuous over the three storeys; and no joint is orphaned.",
+   "In the independent solver check (main-text Section 10.8) the model completes all three analyses with an equilibrium error below 10\u207b\u00b9\u2070. The largest joint deflection under gravity is 0.77 mm and the largest beam mid-span deflection 1.73 mm. The fundamental period is 0.128 s against the EN 1998-1 estimate of 0.26 s; the walls carry 96.6% (X) and 98.2% (Y) of the base shear and 64.6% of the gravity reaction, and beams carry 85.6% of the slab load. The torsion ratios, 1.07 in X and 1.28 in Y, are consistent with the eccentricity warning being in y."
+  ],
+  "S2_intro": "Figs. S1 and S2 show every evaluation plan in the layout of main-text Fig. 10: the source drawing, the Stage 1 wall mask, the Stage 4 shear-wall and column layout, and the three-storey model exported with the joint-connectivity step. Row labels give the coherence score and the checks that warn or fail. The Stage 4 panels plot plan y downwards, as in the drawing, and the model panels upwards.",
+  "figS1_caption": "Fig. S1. Evaluation plans floor_plan_1 to floor_plan_5: source drawing, Stage 1 wall mask, Stage 4 layout and exported model.",
+  "figS2_caption": "Fig. S2. Evaluation plans floor_plan_6 to floor_plan_9 and plan_05: source drawing, Stage 1 wall mask, Stage 4 layout and exported model.",
+  "orientation_para": "Vectorization snaps, merges and consolidates wall segments along the image axes; the graph construction, the shear-wall selector (run grouping, per-direction budgets, lateral lines and eccentricity balancing) and the pier, grid, beam and column rules of the exporter work along two orthogonal plan axes; and the network was trained on axis-aligned drawings. Many buildings, however, are drawn rotated on the sheet. The dominant wall direction theta is therefore estimated, from the edge-gradient directions of the wall mask in Stage 2 and from the wall segments in the later stages, as the weighted circular mean of 4phi, which treats directions phi and phi + 90 degrees as the same. When theta deviates from the drawing axes by more than 5 degrees, Stage 2 vectorizes the mask rotated into this principal frame and maps its output back to the drawing, Stages 3 and 4 run on the plan rotated by -theta about its centroid and rotate their output back, and the exporter builds the model in the same frame and rotates every node back, so a rotated building is treated exactly as an axis-aligned one would be. In the exporter, a shear-wall pier that deviates from the frame axes by more than 5 degrees, or that snapping onto an axis would move by more than 0.30 m, is exported along its own direction, and a Stage 4 pier group whose members lie more than 0.30 m off a common line is split into straight runs. The direction-based coherence checks classify walls in the same principal frame. Section 10.7 quantifies the effect of this handling by disabling it. The ten evaluation plans lie within 0.1 degrees of the drawing axes, so the step is inactive for them and their models are unchanged.",
+  "fig4_cols": "green squares are the 113 storey-1 columns of the exported model, at 110 distinct plan locations, including the 15 posts added by the joint-connectivity step.",
+  "fig10_caption": "Fig. 10. Representative success and failure from the batch, at full column width. The top row, floor_plan_9, is one of the 4 plans scoring 1.00; the bottom row, floor_plan_1, is one of the 3 lowest-scoring plans (0.83). Columns show the source drawing, the Stage 1 wall mask, the Stage 4 shear-wall and column layout, and the three-storey model exported with the joint-connectivity step. The complete ten-plan gallery is in Supplementary Section S2.",
+  "orient_para": "Many MSD buildings are drawn rotated: the dominant wall direction deviates from the drawing axes by more than 5 degrees in 78.7% of the plans (median 27 degrees where it does). The effect of the principal-frame handling of Section 5.5 is measured by disabling it, so that every stage works in the drawing axes: Stage 2 then snaps walls lying within 25 degrees of an axis onto it and leaves steeper ones as unmerged fragments, Stage 4 groups, budgets and balances the walls along axes that are not their own, and the exporter projects every pier onto the x or y axis. A direct measure is the share of the exported storey-1 shear-wall length that lies on wall pixels of the input mask (within three pixels). Without the handling it is a median 0.31 on the rotated plans and 0.92 on the others, and 83.6% of all models have less than 0.80 of their shear-wall length on the mask; with it the medians are 1.00 and 0.92 and 9.9% of the models fall below 0.80. The vectorized walls themselves lie on the mask for a mean 0.85 of their length without the handling and 0.97 with it. Without it the mean coherence would be 0.912, with eccentricity failing on 32.7% and the lateral-line check on 2.8% of plans; on the rotated plans the mean is 0.915 without and 0.893 with the handling, and on the remaining plans 0.900 and 0.900. The higher score without the handling is not a merit: misplaced walls are still valid shells, so neither the checks nor the solver reject them, and the eccentricity of a rotated plan is then measured on walls that are not where the drawing puts them. Measured on walls where the drawing puts them, the eccentricity grade agrees better with the solver torsion ratio (Spearman rho = 0.59, against 0.53 without the handling). All other MSD results in this section, in Table 16, Figs. 11 to 13, Section 10.8 and Section 11.1 use the handling.",
+  "fig12_caption": "Fig. 12. Representative MSD results spanning the score range (top to bottom: MSD 3098, 2123 and 4614, coherence 1.00, 0.833 and 0.500); columns show the wall mask derived from the MSD structural raster, the Stage 4 shear-wall and column layout, and the four-storey model exported with the joint-connectivity step in the plan's principal frame. The Stage 4 panels plot plan y downwards, the model panels upwards. More plans are shown in Supplementary Section S3.",
+  "S3_intro": "Figs. S3 to S5 show 11 further MSD plans in the layout of main-text Fig. 12, all exported with the joint-connectivity step and in their principal frame. They were drawn at random (seed 2026) as two plans from each of the five most frequent score levels and the lowest-scoring remaining plan, keeping plan identifiers more than 100 apart so that no two floors of one building appear; the plans of Fig. 12 are excluded. Row labels give the plan identifier, the coherence score and the checks that warn or fail.",
+  "figS3_caption": "Fig. S3. MSD plans 11908, 48966, 3271 and 1442: wall mask, Stage 4 layout and exported four-storey model.",
+  "figS4_caption": "Fig. S4. MSD plans 44342, 3878, 2410 and 26: wall mask, Stage 4 layout and exported four-storey model.",
+  "figS5_caption": "Fig. S5. MSD plans 29855, 6356 and 11480: wall mask, Stage 4 layout and exported four-storey model."
+ },
+ "ten": {
+  "mean6": 0.925,
+  "mean4": 0.8875,
+  "mean6_pub_strict": 0.75,
+  "nofail": 7,
+  "all6": 4,
+  "cols0_total": 1062,
+  "cols0_pub": 935,
+  "net": 522,
+  "rule": 540,
+  "net_pub": 521,
+  "posts_corner": 20,
+  "posts_span": 107,
+  "posts_float": 0,
+  "merged": 429,
+  "snapped": 818,
+  "pub_float_med": 0.16646374458874458,
+  "pub_float_max": 0.24358974358974358,
+  "pub_uz_med": 427.52800935997914,
+  "con_ok": 10,
+  "con_float": 0,
+  "con_uz_max": 1.3582992069405744,
+  "con_mid_max": 5.502852989446256,
+  "con_Ld_min": 475.3538146591322,
+  "con_T1_med": 0.11474541976151822,
+  "con_eq_max": 1.2676113545629068e-11,
+  "nms_d06": 29.1,
+  "nms_d40": 22.209,
+  "nms_s06": 0.925,
+  "nms_s40": 0.925,
+  "nms_s30": 0.925,
+  "arms": {
+   "rules only": {
+    "n": 18.9,
+    "L": 86.089,
+    "score": 0.925,
+    "fails": 0.3,
+    "J": 0.8788858136721114
+   },
+   "deployed": {
+    "n": 21.8,
+    "L": 91.785,
+    "score": 0.925,
+    "fails": 0.3,
+    "J": 1.0
+   },
+   "permissive": {
+    "n": 24.4,
+    "L": 97.84700000000001,
+    "score": 0.925,
+    "fails": 0.3,
+    "J": 0.9067096774193548
+   },
+   "network only": {
+    "n": 21.3,
+    "L": 75.089,
+    "score": 0.8916000000000001,
+    "fails": 0.5,
+    "J": 0.4393057865557866
+   }
+  },
+  "arm_added": 29,
+  "arm_total": 218,
+  "arm_missing": 0,
+  "net_add": 83,
+  "net_omit": 88,
+  "budget_scores": {
+   "0.02": 0.925,
+   "0.01": 0.925,
+   "0.015": 0.925,
+   "0.025": 0.925,
+   "0.03": 0.925,
+   "0.04": 0.925
+  },
+  "s12_dmed": 3.5908567283738777,
+  "s12_dmax": 19.585901368311397,
+  "s12_changed": 3,
+  "s12_lenient": 3
+ },
+ "msd": {
+  "n_att": 4572,
+  "n_ok": 4572,
+  "err_ids": [],
+  "err_msgs": {},
+  "mean6": 0.8943394575678041,
+  "mean4": 0.8431485126859143,
+  "median": 0.833,
+  "q25": 0.833,
+  "q75": 1.0,
+  "ge80": 0.9774715660542432,
+  "ge90": 0.4877515310586177,
+  "perfect": 0.2819335083114611,
+  "min": 0.5,
+  "pub_orig_mean": 0.9091667031284182,
+  "pub_strict_mean": 0.7365657405381755,
+  "pub_strict_ge80": 0.316342157077226,
+  "repro": 1.0,
+  "inc": {
+   "lateral_lines": {
+    "pass": 0.9805336832895888,
+    "warn": 0.0,
+    "fail": 0.0194663167104112
+   },
+   "eccentricity": {
+    "pass": 0.28937007874015747,
+    "warn": 0.20756780402449693,
+    "fail": 0.5030621172353456
+   },
+   "beam_support": {
+    "pass": 1.0,
+    "warn": 0.0,
+    "fail": 0.0
+   },
+   "slab_span": {
+    "pass": 0.9982502187226596,
+    "warn": 0.0013123359580052493,
+    "fail": 0.0004374453193350831
+   },
+   "column_continuity": {
+    "pass": 0.9881889763779528,
+    "warn": 0.011592300962379702,
+    "fail": 0.00021872265966754156
+   },
+   "orphan_nodes": {
+    "pass": 1.0,
+    "warn": 0.0,
+    "fail": 0.0
+   }
+  },
+  "inc_pub": {
+   "lateral_lines": {
+    "pass": 0.9805294246335594,
+    "warn": 0.0,
+    "fail": 0.019470575366440604
+   },
+   "eccentricity": {
+    "pass": 0.2916210894771385,
+    "warn": 0.20651936119011158,
+    "fail": 0.5018595493327499
+   },
+   "beam_support": {
+    "pass": 0.05600525049223365,
+    "warn": 0.0006563115292058631,
+    "fail": 0.9433384379785605
+   },
+   "slab_span": {
+    "pass": 0.9783417195362065,
+    "warn": 0.01793918179829359,
+    "fail": 0.0037190986654998905
+   },
+   "column_continuity": {
+    "pass": 1.0,
+    "warn": 0.0,
+    "fail": 0.0
+   },
+   "orphan_nodes": {
+    "pass": 1.0,
+    "warn": 0.0,
+    "fail": 0.0
+   }
+  },
+  "pub_float_plans": 0.8293590024064756,
+  "pub_unj_plans": 0.9433384379785605,
+  "con_float": 0,
+  "con_unj": 0,
+  "ecc_med": 0.2016,
+  "ecc_p90": 0.40829000000000004,
+  "ecc_p99": 0.4856,
+  "ecc_bins": [
+   0.29024496937882766,
+   0.2069116360454943,
+   0.19925634295713035,
+   0.30358705161854765
+  ],
+  "col_ratio_med": 1.0769230769230769,
+  "col_ratio_mean": 1.0864197259419401,
+  "col_ratio_max": 2.75,
+  "posts_corner_tot": 2691,
+  "posts_span_tot": 15245,
+  "posts_float_tot": 568,
+  "plans_with_posts": 0.9420384951881015,
+  "sec_med": 7.2,
+  "ecc_changed": 33,
+  "ll_changed": 0,
+  "ge80_pct": "97.7%",
+  "n_scored_str": "4,572",
+  "orient": {
+   "rot_share": 0.786745406824147,
+   "n_rot": 3597,
+   "fa_med_rot": 26.7076,
+   "n_fid": 4559,
+   "axis_off_med": 0.7192079115248938,
+   "axis_off_p95": 3.2495526983239422,
+   "axis_off_max": 6.51963989813903,
+   "new_off_med": 0.04129503147816863,
+   "new_off_p95": 0.6025874421881494,
+   "new_off_p99": 1.1023728588397586,
+   "new_off_max": 1.6510869177605403,
+   "axis_share030": 0.5900416758060978,
+   "new_share030": 0.09037069532792279,
+   "axis_angmax_med_rot": 31.184974658738344,
+   "axis_len_ratio": 0.7744419155421998,
+   "new_len_ratio": 0.9704051469573881,
+   "axis_mean6": 0.9116633121855173,
+   "axis_ge80": 0.9776854080070007,
+   "axis_ecc_fail": 0.3268431415445198,
+   "axis_ll_fail": 0.02822139575585211,
+   "rot_mean_axis": 0.9147291434927698,
+   "rot_mean_new": 0.8928012232415902,
+   "ax_mean_axis": 0.9003558974358974,
+   "ax_mean_new": 0.900014358974359,
+   "score_changed": 0.4241960183767228,
+   "score_changed_axisaligned": 0.005128205128205128
+  },
+  "onmask": {
+   "first_panels_rot": 0.30799092488944285,
+   "first_panels_ax": 0.9216465195543135,
+   "new_panels_rot": 1.0,
+   "new_panels_ax": 0.9237019715948227,
+   "first_walls_rot": 0.953491426805753,
+   "first_walls_ax": 0.9579671448464098,
+   "new_walls_rot": 1.0,
+   "new_walls_ax": 0.9581523113165302,
+   "first_panels_mean": 0.4628843326015154,
+   "new_panels_mean": 0.9499103603979978,
+   "first_walls_mean": 0.8513029099975868,
+   "new_walls_mean": 0.9697609240895801,
+   "first_lt80": 0.8361482781311691,
+   "new_lt80": 0.09892755526373385
+  },
+  "wallstock": {
+   "ll_fail_med": 46.81367023111711,
+   "ll_pass_med": 127.22228146652216
+  },
+  "S5": {
+   "equal (deployed)": {
+    "ten": 0.925,
+    "msd": 0.8944298629338,
+    "ge80": 0.9774715660542432,
+    "rho": 1.0
+   },
+   "lateral system emphasis": {
+    "ten": 0.8875,
+    "msd": 0.8425333552055994,
+    "ge80": 0.4903762029746282,
+    "rho": 0.9986268805070344
+   },
+   "gravity system emphasis": {
+    "ten": 0.94375,
+    "msd": 0.9206856955380578,
+    "ge80": 0.9860017497812773,
+    "rho": 0.9996220488845082
+   },
+   "topology down-weighted": {
+    "ten": 0.9,
+    "msd": 0.8602422961018762,
+    "ge80": 0.4899387576552931,
+    "rho": 0.9988248447369563
+   },
+   "four informative checks": {
+    "ten": 0.8875,
+    "msd": 0.8431485126859143,
+    "ge80": 0.4899387576552931,
+    "rho": 0.9940276124469906
+   },
+   "equal, warn credit 0.25": {
+    "ten": 0.9125,
+    "msd": 0.8852435112277631,
+    "ge80": 0.9748468941382327,
+    "rho": 0.998898800657576
+   },
+   "equal, warn credit 0.75": {
+    "ten": 0.9375000000000002,
+    "msd": 0.9036162146398367,
+    "ge80": 0.9774715660542432,
+    "rho": 0.998898800657576
+   }
+  },
+  "gnn": {
+   "n": 4572,
+   "mean": 0.8576406386701663,
+   "dep_mean": 0.8943394575678041,
+   "ge80": 0.8825459317585301,
+   "dep_ge80": 0.9774715660542432,
+   "ecc_fail": 0.5846456692913385,
+   "dep_ecc_fail": 0.5030621172353456,
+   "ll_fail": 0.14916885389326334,
+   "dep_ll_fail": 0.0194663167104112,
+   "complete": true
+  },
+  "solve": {
+   "n": 4572,
+   "n_ok": 4572,
+   "complete": true,
+   "fail_ids": [],
+   "float_any": 0,
+   "eq_max": 1.0644283715525999e-10,
+   "uz_max": 4.2806296245790465,
+   "uz_p99": 2.5030085304500083,
+   "mid_max": 7.4455434130410705,
+   "mid_p99": 5.202244709314407,
+   "Ld_min": 54.34101974613559,
+   "Ld_p1": 308.47075430588615,
+   "T1_med": 0.15443342264527798,
+   "TT_med": 0.47905497840487965,
+   "ws_med": 0.990285788652826,
+   "wg_med": 0.7665207849813653,
+   "beam_share_med": 0.8278315979772244,
+   "sec_med": 5.032334327697754,
+   "rho_grade": 0.5938556036849366,
+   "rho_ecc": 0.6580779867808275,
+   "ecc_fail_tor12": 0.7808695652173913,
+   "ecc_pass_tor12": 0.22448979591836735,
+   "tor_med_by": {
+    "pass": 1.099385164500732,
+    "warn": 1.1637232329465221,
+    "fail": 1.3408910454052223
+   },
+   "TT_fail": 1.1255258615708905,
+   "TT_pass": 0.4690048676019461,
+   "n_ll_fail": 89
+  },
+  "solve_pub150": {
+   "n": 150,
+   "n_ok": 149,
+   "float_any": 126,
+   "float_med": 0.06451612903225806,
+   "float_max": 0.30303030303030304,
+   "uz_med": 51.30813045878135,
+   "n_uz25": 88
+  },
+  "ecc_cmp": {
+   "n": 4569,
+   "rho_proxy": 0.657694031211199,
+   "rho_full": 0.690181324563567,
+   "verdict_change": 0.39986868023637556,
+   "lenient": 0.381483913328956,
+   "fail_full": 0.24644342306850514
+  }
+ },
+ "files": {
+  "fig4": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig4_v3.png",
+  "fig7a": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig7a_v3.png",
+  "fig7b": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig7b_v3.png",
+  "fig10": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig10_v3.png",
+  "fig12": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig12_v5.png",
+  "figS1": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\figS1_v3.png",
+  "figS2": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\figS2_v3.png",
+  "figS3": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\figS3_v5.png",
+  "figS4": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\figS4_v5.png",
+  "figS5": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\figS5_v5.png",
+  "fig8": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig8_batch_v3.png",
+  "fig11": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig11_msd_v3.png",
+  "fig13": "C:\\Users\\chris\\Documents\\Plan2FEM_revision\\04_results\\figs_v3\\fig13_solver_v3.png"
+ }
+}

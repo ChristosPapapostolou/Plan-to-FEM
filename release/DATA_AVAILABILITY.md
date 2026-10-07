@@ -8,6 +8,7 @@ machine-readable outputs.
 - **StructGAN**: Shear-wall design pairs from the StructGAN corpus. NOT redistributed. Obtain from the original authors. This deposit contains only the identifiers of the pairs used in each split (splits/structgan_*.txt).
 - **CubiCasa5K**: Publicly available under its own licence. NOT redistributed. The official 4199/399/399 split files ship with the dataset and are used unmodified.
 - **Modified Swiss Dwellings (MSD)**: Publicly available under its own licence. NOT redistributed. Plan identifiers used are listed in splits/msd_plan_ids.txt.
+- **Ten evaluation drawings** (floor_plan_1-9, plan_05): not redistributed in this deposit.
 
 No restriction applies to the code, checkpoints or derived results in this
 deposit; they are released for unrestricted academic use.

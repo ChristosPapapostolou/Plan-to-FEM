@@ -30,9 +30,8 @@ train/cache_*.pkl
 results/
 
 # ----------------------------------------------------- evaluation plan images
-# Held back pending the provenance audit (reviewer comment 33): the source and
-# licence of these ten drawings are not yet established, so they are not
-# published here. Restore this directory once provenance is confirmed.
+# The ten evaluation drawings are not redistributed here (see
+# release/DATA_AVAILABILITY.md).
 images/
 
 # --------------------------------------------------------- manuscript drafts

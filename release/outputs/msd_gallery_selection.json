@@ -1,0 +1,49 @@
+{
+ "fig12": [
+  3098,
+  2123,
+  4614
+ ],
+ "gallery": {
+  "1.0": [
+   11908,
+   48966
+  ],
+  "0.917": [
+   3271,
+   1442
+  ],
+  "0.833": [
+   44342,
+   3878
+  ],
+  "0.75": [
+   2410,
+   26
+  ],
+  "0.667": [
+   29855,
+   6356
+  ],
+  "low": [
+   11480
+  ]
+ },
+ "all": [
+  26,
+  1442,
+  2123,
+  2410,
+  3098,
+  3271,
+  3878,
+  4614,
+  6356,
+  11480,
+  11908,
+  29855,
+  44342,
+  48966
+ ],
+ "rule": "Fig. 12: 3098 (score 1.00, axis-aligned), a rotated lower-quartile plan with an eccentricity warning, the lowest-scoring plan; gallery: two plans per score level for the five most frequent levels and the two lowest-scoring remaining plans; seed 2026; picks more than 100 ids apart so that no two floors of one building appear"
+}

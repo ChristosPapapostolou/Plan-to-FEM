@@ -38,6 +38,46 @@ def _nodes_xyz(model):
             for n in model.get("nodes", [])}
 
 
+AXIS_TOL_DEG = 5.0
+
+
+def _dominant_angle(segs):
+    """Length-weighted dominant direction (deg, in (-45, 45]) from the circular mean of 4*phi."""
+    sx = sy = 0.0
+    for p1, p2, *_ in segs:
+        d = np.asarray(p2, float)[:2] - np.asarray(p1, float)[:2]
+        L = float(np.hypot(*d))
+        if L < 1e-9:
+            continue
+        phi = np.arctan2(d[1], d[0])
+        sx += L * np.cos(4 * phi); sy += L * np.sin(4 * phi)
+    if sx == 0.0 and sy == 0.0:
+        return 0.0
+    return float(np.degrees(np.arctan2(sy, sx) / 4.0))
+
+
+def _principal_frame(model, nodes, tol_deg=AXIS_TOL_DEG):
+    """Rotate node plan coordinates into the dominant shear-wall direction, so the direction-based
+    checks (lateral lines, eccentricity) see a rotated building as an axis-aligned one.  Distances,
+    supports and continuity are unaffected by a rigid rotation."""
+    theta = _dominant_angle(_story_panels(model, nodes, 0, sw_only=True))
+    if abs(theta) <= tol_deg or not nodes:
+        return nodes, 0.0
+    P = np.vstack([v[:2] for v in nodes.values()]); c0 = P.mean(axis=0)
+    c, s = np.cos(np.radians(-theta)), np.sin(np.radians(-theta)); R = np.array([[c, -s], [s, c]])
+    out = {}
+    for k, v in nodes.items():
+        xy = R @ (v[:2] - c0) + c0
+        out[k] = np.array([xy[0], xy[1], v[2]], float)
+    return out, theta
+
+
+def _off_axis(p1, p2, tol_deg=AXIS_TOL_DEG):
+    d = np.abs(np.asarray(p2, float)[:2] - np.asarray(p1, float)[:2])
+    a = float(np.degrees(np.arctan2(d[1], d[0])))
+    return min(a, 90.0 - a) > tol_deg
+
+
 def _story_panels(model, nodes, story=0, sw_only=True):
     """SW wall panels of one story as bottom-edge segments [(p1,p2,t)]."""
     segs = []
@@ -116,7 +156,7 @@ def _merge_collinear(segs, *, off_tol=0.20, gap_tol=0.20):
         ax = 0 if orient == "H" else 1
         perp = 1 - ax
         items = [(p1, p2, t) for (p1, p2, t) in segs
-                 if _orient(p1, p2) == orient]
+                 if _orient(p1, p2) == orient and not _off_axis(p1, p2)]
         used = [False] * len(items)
         for i, (p1, p2, t) in enumerate(items):
             if used[i]:
@@ -143,6 +183,7 @@ def _merge_collinear(segs, *, off_tol=0.20, gap_tol=0.20):
             a[perp] = b[perp] = band
             a[ax], b[ax] = lo, hi
             out.append((a, b, tmax))
+    out += [(p1, p2, t) for (p1, p2, t) in segs if _off_axis(p1, p2)]   # off-axis piers kept as exported
     return out
 
 
@@ -203,7 +244,7 @@ def check_eccentricity(model, nodes, *, warn_frac=0.10, fail_frac=0.20):
                 suggestion=sugg)
 
 
-def check_beam_support(model, nodes, *, tol=0.20):
+def _beam_support_distance(model, nodes, *, tol=0.20):
     """Every beam end must land on a column, a wall top edge, or another beam."""
     beams = [fm for fm in model.get("frame_members", [])
              if fm.get("type") == "beam" and fm.get("story") == 0]
@@ -255,6 +296,55 @@ def check_beam_support(model, nodes, *, tol=0.20):
                        f"{n_beam} on other beams, {n_unsup} unsupported"
                        + (f" at {unsupported[:5]}" if unsupported else ""))
 
+
+
+def check_beam_support(model, nodes, *, tol=0.20):
+    """Every beam end must land on a column, a wall top edge, or another beam, AND be connected.
+
+    The distance test (_beam_support_distance, 0.20 m) is necessary but not sufficient: an FE package
+    joins elements only at shared joints.  The check therefore also fails when (i) a beam end is not on a
+    joint shared with a column, a wall panel or another beam, or (ii) any frame member or wall panel has
+    no element path to the base (a floating sub-assembly).
+    """
+    r = _beam_support_distance(model, nodes, tol=tol)
+    fms = model.get("frame_members", []); wps = model.get("wall_panels", [])
+    col = {n for f in fms if f.get("type") == "column" for n in (f["start_node"], f["end_node"])}
+    wall = {n for w in wps for n in w.get("nodes", [])}
+    deg = {}
+    for f in fms:
+        for n in (f["start_node"], f["end_node"]):
+            deg[n] = deg.get(n, 0) + 1
+    ends = [n for f in fms if f.get("type") == "beam" for n in (f["start_node"], f["end_node"])]
+    unjoined = sum(1 for n in ends if n not in col and n not in wall and deg.get(n, 0) < 2)
+    par = {}
+
+    def fnd(a):
+        par.setdefault(a, a)
+        while par[a] != a:
+            par[a] = par[par[a]]
+            a = par[a]
+        return a
+    for f in fms:
+        par[fnd(f["start_node"])] = fnd(f["end_node"])
+    for w in wps:
+        for k in w["nodes"][1:]:
+            par[fnd(w["nodes"][0])] = fnd(k)
+    if nodes:
+        zmin = min(float(v[2]) for v in nodes.values())
+        based = {fnd(k) for k, v in nodes.items() if float(v[2]) <= zmin + 1e-3}
+    else:
+        based = set()
+    floating = (sum(1 for f in fms if fnd(f["start_node"]) not in based)
+                + sum(1 for w in wps if w.get("nodes") and fnd(w["nodes"][0]) not in based))
+    v = dict(r.get("value") or {})
+    v.update(unjoined=unjoined, floating=floating)
+    r["value"] = v
+    if unjoined or floating:
+        r["status"] = FAIL
+        r["suggestion"] = (r.get("suggestion") or "") + " re-export with the joint-connectivity step (etabs/connect.py)"
+    r["detail"] = (r.get("detail", "") + f"; {unjoined} beam ends not on a shared joint, "
+                   f"{floating} members without a path to the base")
+    return r
 
 def check_slab_span(model, nodes, *, max_span=6.0, grid=0.5):
     """Max clear distance from any slab interior point to a vertical support."""
@@ -344,8 +434,11 @@ def check_orphan_nodes(model, nodes):
 # runner
 # =============================================================================
 
-def run_checks(model: dict, *, max_span=6.0) -> dict:
+def run_checks(model: dict, *, max_span=6.0, principal_frame=True) -> dict:
     nodes = _nodes_xyz(model)
+    frame_deg = 0.0
+    if principal_frame:
+        nodes, frame_deg = _principal_frame(model, nodes)
     checks = [
         check_lateral_lines(model, nodes),
         check_eccentricity(model, nodes),
@@ -362,6 +455,7 @@ def run_checks(model: dict, *, max_span=6.0) -> dict:
         score=round(score, 3),
         n_pass=len(checks) - n_fail - n_warn,
         n_warn=n_warn, n_fail=n_fail,
+        frame_angle_deg=round(frame_deg, 3),
         checks=checks,
     )
 
@@ -372,6 +466,8 @@ def main():
     ap.add_argument("-o", "--output", default=None,
                     help="Report path (default: <input dir>/sanity_report.json)")
     ap.add_argument("--max-span", type=float, default=6.0)
+    ap.add_argument("--no-principal-frame", action="store_true",
+                    help="Classify walls along the drawing axes (behaviour before the orientation fix)")
     ap.add_argument("--strict", action="store_true",
                     help="Exit with code 1 if any check fails")
     args = ap.parse_args()
@@ -379,7 +475,7 @@ def main():
 
     with open(args.input) as f:
         model = json.load(f)
-    report = run_checks(model, max_span=args.max_span)
+    report = run_checks(model, max_span=args.max_span, principal_frame=not args.no_principal_frame)
 
     out = args.output or os.path.join(
         os.path.dirname(os.path.abspath(args.input)), "sanity_report.json")
